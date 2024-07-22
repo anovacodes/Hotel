@@ -1,0 +1,201 @@
+.datepicker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 2rem;
+    background-color: $color-black;
+
+    &_doublearrows &__months {
+        gap: .6rem;
+    }
+
+    &_small &__bottom {
+        margin-top: 1rem;
+    }
+
+    &_white {
+        background-color: $color-white;
+    }
+
+    &__inner {
+        user-select: none;
+    }
+
+    &__title {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: .112rem;
+        text-align: center;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color-brown;
+        margin-bottom: 1.8rem;
+
+        &_white {
+            color: $color-white;
+        }
+
+        &_gray {
+            color: $color-gray-secondary;
+        }
+    }
+
+    &__date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__day {
+        font-family: $font-gilda;
+        font-size: 5rem;
+        font-weight: 400;
+        letter-spacing: -.08rem;
+        line-height: .9;
+        color: $color-brown;
+
+        &_black {
+            color: $color-dark;
+        }
+
+        &_white {
+            color: $color-white;
+        }
+
+        &_small {
+            font-size: 3rem;
+        }
+    }
+
+    &__months {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__month {
+        font-family: $font-gilda;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: $color-brown;
+
+        &_black {
+            color: $color-dark;
+        }
+    }
+
+    &__arrow {
+        &_up {
+            transform: rotate(180deg);
+        }
+
+        & > i {
+            display: block;
+            pointer-events: none;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .6rem;
+        margin-top: 1.8rem;
+    }
+
+    &__year {
+        font-family: $font-gilda;
+        font-size: 1.2rem;
+        line-height: 1;
+        font-style: italic;
+        color: $color-white;
+    }
+
+    &__dayweek {
+        font-size: 1.1rem;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color-gray-secondary;
+    }
+
+    &__input {
+        position: absolute;
+        inset: 0;
+        font-size: 0;
+        color: transparent;
+        background-color: transparent;
+        user-select: none;
+        cursor: pointer;
+    }
+
+    // STYLING A DATEPICKER PLUGIN CALENDAR
+
+    & .qs-datepicker-container {
+        font-size: 1.4em;
+        border: none;
+        box-shadow: 0 0 .8rem rgba($color-black, .4);
+
+        @include breakpoint($mobile-small) {
+            font-size: .9em;
+        }
+    }
+
+    & .qs-controls {
+        background-color: $color-black;
+    }
+
+    & .qs-month-year {
+        font-family: $font-gilda;
+        font-weight: 400;
+        color: $color-white;
+    }
+
+    & .qs-arrow {
+        &.qs-left::after {
+            border-right-color: $color-gray;
+        }
+
+        &.qs-right::after {
+            border-left-color: $color-gray;
+        }
+    }
+
+    & .qs-squares {
+        background-color: $color-dark;
+
+        & .qs-day {
+            color: $color-gray;
+        }
+
+        & .qs-num {
+            color: $color-white;
+
+            &:hover {
+                background-color: $color-brown !important;
+            }
+
+            &.qs-active,
+            &.qs-range-start,
+            &.qs-range-end {
+                background-color: $color-brown;
+            }
+
+            &.qs-range-middle {
+                background-color: rgba($color-brown, .5);
+            }
+
+            &.qs-disabled {
+                opacity: .35;
+            }
+        }
+    }
+
+    & .qs-range-middle {
+        background-color: rgba($color-brown, .5);
+    }
+
+}

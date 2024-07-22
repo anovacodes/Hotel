@@ -1,0 +1,100 @@
+.sort {
+    background-color: $color-dark;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
+
+        @include breakpoint($mobile) {
+            flex-direction: column;
+        }
+    }
+
+    &__options {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 2rem;
+        width: 100%;
+        margin-right: -6rem;
+
+        @include breakpoint($mobile) {
+            margin-right: 0;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0 5rem;
+
+        @include breakpoint($mobile) {
+            padding: 0 2rem;
+            gap: .4rem 2.8rem;
+        }
+    }
+
+    &__item {
+        padding: 0;
+
+        & > div {
+            @include breakpoint($mobile) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+        &:first-child > div {
+            padding-left: 0;
+        }
+
+        &:last-child > div {
+            padding-right: 0;
+        }
+    }
+
+    &__view {
+        
+    }
+}
+
+.view-sort {
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        background-color: $color-dark;
+    }
+
+    &__button {
+        padding: 1rem;
+        cursor: pointer;
+
+        &.active path {
+            fill: $color-white;
+        }
+
+        &:hover path {
+            fill: $color-white;
+        }
+
+        & > svg {
+            width: 2rem;
+            height: 2rem;
+            pointer-events: none;
+
+            & path {
+                fill: $color-gray;
+                transition: fill .1s;
+            }
+        }
+    }
+}

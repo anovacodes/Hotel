@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @@include('./partials/head.html', {
+        "title": "Hotel - Thank You"
+    })
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        @@include('./partials/header.html')
+
+        @@include('./partials/subheader.html', {
+            title: "Thank You",
+            img: "./assets/images/subheader/6.jpg",
+            showSteps: true,
+            classes: ""
+        })
+
+        <div class="content">
+            <div class="container">
+                <div class="content__inner">
+                    <aside class="sidebar">
+                        <ul class="sidebar__list">
+                            <li class="sidebar__item">
+                                <form class="reservation reservation_booking" action="#">
+                                    <div class="reservation__header">
+                                        <img class="reservation__image" src="assets/images/rooms/2.jpeg" alt="image">
+                                    </div>
+
+                                    <div class="reservation__body">
+                                        <h4 class="reservation__title">Your reservation</h4>
+
+                                        <div class="reservation__dates">
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "",
+                                                    title: "",
+                                                    day: "",
+                                                    month: ""
+                                                },
+                                                showTitle: true,
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                showYear: true,
+                                                id: "1-1",
+                                                name: "startDate",
+                                                info: {
+                                                    title: "CHECK-IN",
+                                                    num: 26,
+                                                    month: "Jun",
+                                                    dayweek: "monday"
+                                                }
+                                            })
+
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "",
+                                                    title: "",
+                                                    day: "",
+                                                    month: ""
+                                                },
+                                                showTitle: true,
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                showYear: true,
+                                                id: "1-2",
+                                                name: "endDate",
+                                                info: {
+                                                    title: "CHECK-OUT",
+                                                    num: 27,
+                                                    month: "Jun",
+                                                    dayweek: "friday"
+                                                }
+                                            })
+
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "datepicker_small",
+                                                    title: "",
+                                                    day: "datepicker__day_small datepicker__day_white",
+                                                    month: ""
+                                                },
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                name: "guests",
+                                                info: {
+                                                    dayweek: "GUESTS",
+                                                    num: 2
+                                                }
+                                            })
+
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "datepicker_small",
+                                                    title: "",
+                                                    day: "datepicker__day_small datepicker__day_white",
+                                                    month: ""
+                                                },
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                name: "nights",
+                                                info: {
+                                                    dayweek: "nights",
+                                                    num: 3
+                                                }
+                                            })
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reservation__footer">
+                                        <div class="reservation__price">
+                                            <span class="reservation__num">300</span>
+
+                                            <div class="reservation__price-info">
+                                                <div class="reservation__currency">$</div>
+                                                <div class="reservation__total">/ TOTAL</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <main class="main">
+                        <form class="order" action="#">
+                            <section class="order__section">
+                                <h2 class="order__title">Your Order Details</h2>
+
+                                <div class="info">
+                                    <ul class="info__list">
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>Name :</span>
+                                                <span>John</span>
+                                            </p>
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>Surname :</span>
+                                                <span>Doe</span>
+                                            </p>
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>Email :</span>
+                                                <span>info@email.com</span>
+                                            </p> 
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>Phone :</span>
+                                                <span>001256735467</span>
+                                            </p> 
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>Address :</span>
+                                                <span>Boulevard Stre 123</span>
+                                            </p>
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>City :</span>
+                                                <span>New York</span>
+                                            </p>
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>Country :</span>
+                                                <span>United States America</span>
+                                            </p>
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>ZIP :</span>
+                                                <span>34567</span>
+                                            </p>
+                                        </li>
+
+                                        <li class="info__item">
+                                            <p class="info__text">
+                                                <span>Arrival :</span>
+                                                <span>10 am to 11 am</span>
+                                            </p>
+                                        </li>
+                                    </ul>
+
+                                    <div class="info__requests requests-info">
+                                        <h4 class="requests-info__title">Requests :</h4>
+                                        <p class="requests-info__text">Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum, venenatis malesuada lis quis.</p>
+                                    </div>
+
+                                    <div class="info__services services-info">
+                                        <h4 class="services-info__title">Extra Services :</h4>
+
+                                        <ul class="services-info__list">
+                                            <li class="services-info__item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512px" height="512px">
+                                                    <g>
+                                                        <path d="M104.075,439.947h87.692V232.169h-87.692V439.947z M119.715,247.809h56.412v176.499h-56.412V247.809   z" fill="#878787"/>
+                                                        <rect x="127.903" y="264.19" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="151.926" y="264.19" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="127.903" y="296.221" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="151.926" y="296.221" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="127.903" y="328.241" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="151.926" y="328.241" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="127.903" y="360.261" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="151.926" y="360.261" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="135.911" y="392.281" width="24.023" height="15.64" fill="#878787"/>
+                                                        <polygon points="0,72.053 0,327.866 48.034,327.866 48.034,360.076 63.674,360.076 63.674,327.866    95.887,327.866 95.887,312.227 15.64,312.227 15.64,87.693 496.36,87.693 496.36,280.203 480.162,280.203 480.162,295.843    496.36,295.843 496.36,312.227 199.958,312.227 199.958,327.866 448.325,327.866 448.325,360.076 463.965,360.076 463.965,327.866    512,327.866 512,72.053  " fill="#878787"/>
+                                                        <rect x="384.096" y="280.205" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="416.116" y="280.205" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="448.136" y="280.205" width="16.011" height="15.64" fill="#878787"/>
+                                                        <rect x="239.989" y="104.079" width="32.023" height="15.64" fill="#878787"/>
+                                                        <rect x="199.962" y="280.205" width="168.119" height="15.64" fill="#878787"/>
+                                                        <rect x="23.831" y="280.205" width="72.048" height="15.64" fill="#878787"/>
+                                                    </g>
+                                                </svg>
+
+                                                Television
+                                            </li>
+
+                                            <li class="services-info__item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve" width="512px" height="512px">
+                                                    <g>
+                                                        <rect x="472.305" y="223.98" width="15.674" height="64.043" fill="#878787"/>
+                                                        <rect x="496.328" y="223.98" width="15.674" height="64.043" fill="#878787"/>
+                                                        <path d="M363.432,148.569c-28.696-28.696-66.849-44.5-107.432-44.5s-78.736,15.804-107.432,44.5   c-20.897,20.897-35.025,46.915-41.13,75.579H0v63.706h107.438c6.105,28.663,20.232,54.681,41.13,75.579   c28.696,28.696,66.849,44.5,107.432,44.5s78.736-15.804,107.432-44.5c20.898-20.898,35.025-46.916,41.129-75.579h59.407v-63.706   h-59.407C398.457,195.485,384.329,169.466,363.432,148.569z M388.488,224.148h-89.552l58.78-58.78   C372.763,182.214,383.263,202.268,388.488,224.148z M159.652,159.652c25.735-25.735,59.952-39.909,96.349-39.909   c33.771,0,65.661,12.21,90.646,34.529l-69.876,69.876H123.512C129.341,199.744,141.709,177.595,159.652,159.652z M261.096,239.822   l-32.358,32.358h-44.954v-32.358H261.096z M15.674,272.18v-32.358H168.11v32.358H15.674z M123.513,287.854h89.552l-58.78,58.78   C139.237,329.787,128.738,309.733,123.513,287.854z M352.349,352.35c-25.735,25.735-59.952,39.909-96.349,39.909   c-33.771,0-65.661-12.21-90.646-34.529l69.876-69.876h153.257C382.659,312.257,370.292,334.406,352.349,352.35z M448.294,272.18   h-197.39l32.358-32.358h165.033v32.358H448.294z" fill="#878787"/>
+                                                    </g>
+                                                </svg>
+
+                                                No Smoking
+                                            </li>
+
+                                            <li class="services-info__item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;" xml:space="preserve" width="512px" height="512px">
+                                                    <g>
+                                                        <path d="M456.116,223.834c0-110.344-89.771-200.115-200.115-200.115S55.886,113.489,55.886,223.834v8.005   h400.23V223.834z M72.068,215.829c3.618-84.102,63.926-153.765,143.586-171.646c-5.652,4.316-11.563,9.485-17.47,15.668   c-15.851,16.59-28.457,37.093-37.469,60.938c-10.362,27.416-15.965,59.359-16.691,95.04L72.068,215.829L72.068,215.829z    M247.997,215.829h-87.952c1.338-61.72,18.204-111.455,49.007-144.171c14.699-15.613,29.532-24.11,38.946-28.389v172.56H247.997z    M264.007,215.829V43.226c9.214,4.168,23.659,12.427,38.237,27.686c31.257,32.715,48.369,82.708,49.716,144.918h-87.953V215.829z    M367.978,215.829c-0.726-35.681-6.327-67.624-16.69-95.04c-9.012-23.845-21.619-44.348-37.469-60.938   c-5.907-6.182-11.818-11.353-17.47-15.668c79.66,17.881,139.969,87.544,143.586,171.646H367.978z" fill="#878787"/>
+                                                        <rect x="247.997" y="463.972" width="16.01" height="48.03" fill="#878787"/>
+                                                        <rect x="247.997" y="239.845" width="16.01" height="128.072" fill="#878787"/>
+                                                        <path d="M47.881,415.944v40.023h24.014v56.032h16.011v-56.032h336.779v56.032h16.01v-56.032h23.426v-40.023   H47.881z M448.111,439.958H63.891v-8.005h384.22V439.958z" fill="#878787"/>
+                                                        <path d="M171.954,407.94v-2.875c0-16.07-13.074-29.144-29.144-29.144H89.033   c-16.07,0-29.144,13.073-29.144,29.144v2.875h16.01v-2.875c0-7.242,5.892-13.134,13.133-13.134h53.777   c7.242,0,13.133,5.893,13.133,13.134v2.875H171.954z" fill="#878787"/>
+                                                        <path d="M452.114,407.94v-2.875c0-16.07-13.074-29.144-29.144-29.144h-213.87   c-16.07,0-29.144,13.073-29.144,29.144v2.875h16.01v-2.875c0-7.242,5.892-13.134,13.133-13.134h213.87   c7.242,0,13.133,5.893,13.133,13.134v2.875H452.114z" fill="#878787"/>
+                                                        <rect x="248.007" width="15.993" height="16.011" fill="#878787"/>
+                                                    </g>
+                                                </svg>
+
+                                                Private Beach
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="info__payment payment-info">
+                                        <h4 class="payment-info__title">Payment Options :</h4>
+                                        <span class="payment-info__text">Paypal</span>
+                                    </div>
+
+                                    @@include("./partials/UI/button.html", {
+                                        value: "MY ACCOUNT",
+                                        options: {
+                                            type: "link",
+                                            href: "#"
+                                        },
+                                        classes: "payment-info__button"
+                                    })
+                                </div>
+                            </section>
+                        </form>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        @@include('./partials/footer.html')
+        @@include('./partials/mobile-menu.html')
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+.rooms {
+    margin-bottom: 3.5rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin: 0;
+        padding: 0;
+
+        &_grid {
+            grid-template-columns: repeat(2, 1fr);
+
+            @include breakpoint($mobile) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &_list {
+            grid-template-columns: 1fr;
+
+            & .room-card__header {
+                height: 40rem;
+
+                @include breakpoint($mobile) {
+                    height: 24.6rem;
+                }
+            }
+        }
+    }
+}

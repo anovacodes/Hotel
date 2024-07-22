@@ -1,0 +1,140 @@
+.contact {
+    padding: 6.5rem 0;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 3.7rem;
+
+        @include breakpoint($mobile) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__col {
+
+    }
+
+    &__title {
+        font-family: $font-gilda;
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: .1rem;
+        line-height: 1;
+        color: $color-dark;
+        margin-bottom: 2rem;
+
+        @include breakpoint($mobile) {
+            text-align: center;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        letter-spacing: .084rem;
+        color: $color-gray;
+        margin-bottom: 3rem;
+    }
+
+    &__info {
+        margin: 5rem 0;
+
+        @include breakpoint($mobile) {
+            margin: 3rem 0;
+        }
+    }
+}
+
+.info-contact {
+		&__list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.3rem 7rem;
+            margin: 0;
+            padding: 0;
+
+            @include breakpoint($tablet) {
+                gap: 1.3rem 4rem;
+            }
+
+            @include breakpoint($mobile-small) {
+                grid-template-columns: 1fr;
+            }
+		}
+
+		&__item {
+
+		}
+
+		&__key,
+        &__value {
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            letter-spacing: .084rem;
+            line-height: 1.5;
+            color: $color-dark;
+		}
+
+		&__value {
+            text-transform: none;
+            color: $color-gray;
+            margin-left: .6rem;
+		}
+}
+
+.support-contact {
+    &__text {
+        font-size: 1.2rem;
+        letter-spacing: .168rem;
+        text-transform: uppercase;
+        color: $color-gray;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 3rem;
+            height: .1rem;
+            background-color: $color-gray;
+            margin: 2rem 0;
+
+            @include breakpoint($mobile) {
+                margin: 1.4rem auto 2rem;
+            }
+        }
+
+        @include breakpoint($mobile) {
+            text-align: center;
+        }
+    }
+
+    &__tel {
+        display: block;
+        font-family: $font-gilda;
+        font-size: 5.5rem;
+        line-height: 1.1;
+        color: $color-dark;
+        transition: opacity .15s;
+
+        &:hover,
+        &:focus {
+            opacity: .75;
+        }
+
+        @include breakpoint($tablet) {
+            font-size: 4.2rem;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 3.4rem;
+            text-align: center;
+        }
+
+        @include breakpoint($mobile-dino) {
+            font-size: 2.6rem;
+        }
+    }
+}

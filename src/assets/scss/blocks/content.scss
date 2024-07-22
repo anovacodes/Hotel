@@ -1,0 +1,29 @@
+.content {
+    padding: 7rem 0;
+
+    @include breakpoint($mobile) {
+        padding: 6rem 0;
+    }
+
+    &_sidebar-right &__inner {
+        grid-template-columns: 7.7fr 3.7fr;
+
+        @include breakpoint($tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &_single-room {
+        padding: 0 0 8rem;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 3.7fr 7.7fr;
+        gap: 3rem;
+
+        @include breakpoint($tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

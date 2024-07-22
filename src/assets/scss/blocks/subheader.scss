@@ -1,0 +1,260 @@
+.subheader {
+    height: 33.5rem;
+    position: relative;
+    margin-top: 11.8rem;
+    background-color: $color-gray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color-dark, .25);
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        height: 9rem;
+        position: absolute;
+        inset: 0;
+        top: auto;
+        background: linear-gradient(
+            180deg,
+            rgba($color-dark, 0), 
+            rgba($color-dark, .7)
+        );
+    }
+
+    &_clear::after {
+        display: none;
+    }
+
+    & > .container {
+        height: 100%;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: inherit;
+        z-index: 2;
+    }
+
+    &__title {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $font-gilda;
+        font-size: 5.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-white;
+
+        @include breakpoint($tablet) {
+            font-size: 4.8rem;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 4.2rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 3.4rem;
+        }
+    }
+}
+
+.steps-subheader {
+    flex: 0 0 25%;
+    margin-top: auto;
+
+    &__list {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1.5rem 4.5rem;
+        margin: 0;
+        padding: 0 0 3.5rem;
+        counter-reset: steps-counter;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem 1.4rem;
+        font-size: 1.2rem;
+        letter-spacing: .18rem;
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color-white;
+        counter-increment: steps-counter;
+
+        &::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.2rem;
+            height: 2.2rem;
+            content: counter(steps-counter);
+            font-family: $font-gilda;
+            font-size: 1.1rem;
+            line-height: 1;
+            letter-spacing: .165rem;
+            border: .1rem solid $color-white;
+            border-radius: 50%;
+            color: $color-white;
+            padding-left: .2rem;
+        }
+
+        &_active::before {
+            border-color: $color-dark;
+            background-color: $color-dark;
+        }
+    }
+}
+
+.info-subheader {
+    flex: 0 0 25%;
+    margin-top: auto;
+
+    &__avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $color-gray;
+
+        & > img {
+            min-height: 100%;
+            min-width: 100%;
+        }
+    }
+
+    &__list {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem 4.2rem;
+        margin: 0;
+        padding: 0 0 3.5rem;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: .18rem;
+        line-height: 1;
+        color: $color-white;
+
+        & > svg {
+            max-height: 2.3rem;
+            max-width: 2.3rem;
+        }
+    }
+}
+
+.single-subheader {
+    flex: 0 0 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: auto;
+    padding: 0 0 3.5rem;
+
+    @include breakpoint($mobile) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__list {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        gap: 1rem 4.5rem;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint($mobile) {
+            height: auto;
+        }
+    }
+
+    &__item {
+        &_active::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: .2rem;
+            background-color: $color-white;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 1.2rem;
+        letter-spacing: .18rem;
+        line-height: 1;
+        text-transform: uppercase;
+        padding: .8rem 0;
+        color: $color-white;
+        transition: opacity .15s;
+
+        &:hover,
+        &:focus {
+            opacity: .75;
+        }
+    }
+
+    &__price {
+        display: flex;
+        gap: 1.2rem;
+        font-size: 1.4rem;
+        line-height: 1;
+        letter-spacing: .154rem;
+        color: $color-white;
+    }
+
+    &__num {
+        font-family: $font-gilda;
+        font-size: 5rem;
+        line-height: .7;
+
+        @include breakpoint($mobile) {
+            font-size: 3.2rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 2.6rem;
+        }
+    }
+
+    &__price-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__time {
+        text-transform: uppercase;
+    }
+}

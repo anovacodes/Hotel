@@ -1,0 +1,90 @@
+.relax {
+    height: 50rem;
+    position: relative;
+    background-color: $color-gray-secondary;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        inset: 0;
+        background-color: rgba($color-dark, .25);
+        pointer-events: none;
+    }
+
+    & > .container {
+        height: 100%;
+        pointer-events: none;
+    }
+
+    &__inner {
+        width: 38.5%;
+        position: relative;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        text-align: center;
+        z-index: 2;
+
+        @include breakpoint($tablet) {
+            width: 46.5%;
+        }
+
+        @include breakpoint($mobile) {
+            width: 60%;
+        }
+
+        @include breakpoint($mobile-small) {
+            width: 80%;
+        }
+
+        @include breakpoint($mobile-dino) {
+            width: 95%;
+        }
+    }
+
+    &__title {
+        font-family: $font-gilda;
+        font-size: 5.5rem;
+        font-weight: 400;
+        line-height: 1.14;
+        letter-spacing: -.11rem;
+        color: $color-white;
+
+        @include line-clamp(4);
+
+        @include breakpoint($tablet) {
+            font-size: 4.6rem;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 3.8rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 3.2rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: .204rem;
+        color: $color-white;
+        margin: 3rem 0 3.5rem;
+
+        @include line-clamp(3);
+
+        @include breakpoint($mobile-medium) {
+            margin: 2rem 0 2.5rem;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.button {
+    height: 4.3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    font-family: $font-roboto;
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: .16rem;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-brown;
+    outline: none;
+    user-select: none;
+    border: .2rem solid transparent;
+    padding: 1rem 1.4rem;
+    transition: background-color .15s,
+                color .15s;
+
+    &:hover,
+    &:focus {
+        background-color: $color-brown-hover;
+    }
+
+    &_regular {
+        font-weight: 400;
+    }
+
+    &_outline {
+        border: .2rem solid $color-brown;
+        color: $color-brown-secondary;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            color: $color-white;
+            background-color: $color-brown;
+
+            & path {
+                fill: $color-white;
+            }
+        }
+    }
+
+    &_white {
+        border-color: $color-white;
+        color: $color-white;
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            background-color: rgba($color-dark, .2);
+        }
+    }
+
+    &_black {
+        background-color: $color-dark;
+        color: $color-white;
+
+        &:hover,
+        &:focus {
+            background-color: $color-dark-hover;
+        }
+    }
+
+    &_big {
+        height: 4.6rem;
+    }
+
+    & > svg {
+        width: 1.4rem;
+        height: 1.4rem;
+
+        @include breakpoint($mobile-small) {
+            display: none;
+        }
+        
+        & path {
+            transition: fill .15s;
+        }
+    }
+}

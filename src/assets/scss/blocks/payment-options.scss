@@ -1,0 +1,57 @@
+.payment-options {
+    position: relative;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem 2.5rem;
+        margin: 0 0 2.9rem;
+        padding: 0;
+    }
+
+    &__item {
+        user-select: none;
+    }
+
+    &__input {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+    }
+
+    &__input:checked ~ &__label::after {
+        background-color: $color-dark;
+    }
+
+    &__label {
+        position: relative;
+        display: block;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        letter-spacing: .168rem;
+        color: $color-dark;
+        z-index: 2;
+        cursor: pointer;
+
+        &:hover::after {
+            background-color: $color-gray;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: .1rem;
+            background-color: transparent;
+        }
+    }
+
+    &__button {
+        width: 13rem;
+    }
+}

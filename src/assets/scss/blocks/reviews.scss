@@ -1,0 +1,119 @@
+.reviews {
+    display: grid;
+    grid-template-columns: 7.7fr 3.7fr;
+    gap: 3rem;
+
+    @include breakpoint($mobile) {
+        grid-template-columns: 1fr;
+    }
+
+    &__button {
+        width: 15.3rem;
+        margin: 5rem auto 0;
+
+        &_hidden {
+            display: none;
+        }
+    }
+
+    &__rating {
+        @include breakpoint($mobile) {
+            grid-row: 1 / 2;
+        }
+    }
+}
+
+.rating-reviews {
+    &__header {
+        background-color: $color-dark;
+        padding: 5.5rem;
+        margin-bottom: 2rem;
+    }
+
+    &__review {
+        font-family: $font-gilda;
+        font-size: 7rem;
+        line-height: .9;
+        letter-spacing: -.42rem;
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 1rem;
+
+        @include breakpoint($mobile) {
+            font-size: 5.4rem;
+            letter-spacing: .01rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 3.4rem;
+        }
+    }
+
+    &__quantity {   
+        font-size: 1.4rem;
+        line-height: 1;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: .168rem;
+        color: $color-gray-secondary;
+    }
+
+    &__body {
+        line-height: 1;
+        background-color: $color-white;
+        padding: 3rem 2rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.7rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 20% 60% 10%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2.7rem;
+
+        @include breakpoint($laptop) {
+            grid-template-columns: 20% 40% 10%;
+        }
+
+        @include breakpoint($mobile) {
+            grid-template-columns: 15% 70% 15%;
+        }
+
+        @include breakpoint($mobile-small) {
+            grid-template-columns: 15% 50% 10%;
+        }
+    }
+
+    &__text {
+        font-family: $font-gilda;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: -.028rem;
+        color: $color-dark;
+    }
+
+    &__progress {
+        height: 1rem;
+        background-color: #e4e4e4;
+    }
+
+    &__line {
+        height: 100%;
+        width: 50%;
+        background-color: $color-brown;
+    }
+
+    &__num {
+        font-size: 1.4rem;
+        line-height: .056rem;
+        color: $color-gray;
+    }
+}

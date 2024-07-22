@@ -1,0 +1,125 @@
+.dropdown {
+    user-select: none;
+
+    &.active &__button i {
+        transform: rotate(180deg);
+        margin-top: -.2rem;
+    }
+
+    &_disabled &__list {
+        max-height: none;
+    }
+
+    &_rating &__list {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-bottom: 2.9rem;
+    }
+
+    &_rating &__item,
+    &_stars &__item {
+        padding: 0 !important;
+    }
+
+    &_stars &__list {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding-bottom: 2.9rem;
+    }
+
+    &__button {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        font-family: $font-gilda;
+        font-size: 2rem;
+        letter-spacing: .12rem;
+        line-height: 1;
+        color: $color-dark;
+        padding: 2.9rem 2rem 2.9rem 0;
+
+        & > i {
+            display: block;
+            font-size: 1.4rem;
+            pointer-events: none;
+        }
+    }
+
+    &__title {
+        text-align: left;
+        pointer-events: none;
+    }
+
+    &__list {
+        max-height: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $color-white;
+        transition: max-height .25s;
+
+        @include breakpoint($mobile-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &:nth-last-child(-n + 2) {
+            padding-bottom: 2.9rem;
+
+            @include breakpoint($mobile-small) {
+                padding-bottom: 0;
+            }
+        }
+
+        &:last-child {
+            @include breakpoint($mobile-small) {
+                padding-bottom: 2.9rem;
+            }
+        }
+    }
+
+    &__rating {
+        appearance: none;
+        position: relative;
+        display: block;
+        width: 3.9rem;
+        height: 3.2rem;
+        background-color: $color-dark;
+        margin: 0;
+        cursor: pointer;
+        transition: opacity .1s,
+                    background-color .1s;
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: attr(value);
+            font-size: 1.25rem;
+            line-height: 1;
+            letter-spacing: -.024rem;
+            color: $color-white;
+        }
+
+        &:hover:not(:checked) {
+            opacity: .8;
+        }
+
+        &:checked {
+            background-color: $color-brown;
+        }
+    }
+}

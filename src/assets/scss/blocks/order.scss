@@ -1,0 +1,48 @@
+.order {
+    &__section {
+        padding: 4rem 0;
+        border-bottom: .2rem solid #f9f9f9;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__section_order &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        font-family: $font-gilda;
+        font-size: 3rem;
+        line-height: 1.2;
+        text-transform: capitalize;
+        color: $color-dark;
+        margin-bottom: 3rem;
+
+        @include breakpoint($tablet) {
+            text-align: center;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 2.4rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: .084rem;
+        color: $color-gray;
+        margin-bottom: 1.2rem;
+    }
+}

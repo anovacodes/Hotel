@@ -1,0 +1,18 @@
+<div class="star-rating @@classes">
+    <div class="star-rating__stars">
+        @@for (var i = 0; i < stars; i++) {
+            <span class="icon-star"></span>
+        }
+    </div>
+
+    @@if (!context.onlyStars) {
+        <div class="star-rating__inner">
+            @@for (var i = 0; i < stars; i++) {
+                <input class="star-rating__input" id="star-rating-@@id-`+[i]+`" name="rating-@@id" type="radio" value="1">
+                <label class="star-rating__label" for="star-rating-@@id-`+[i]+`">
+                    <span class="icon-star"></span>
+                </label>
+            }
+        </div>
+    }
+</div>

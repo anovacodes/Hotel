@@ -1,0 +1,21 @@
+.similar-rooms {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint($mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint($mobile-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__button {
+        width: 14.7rem;
+    }
+}

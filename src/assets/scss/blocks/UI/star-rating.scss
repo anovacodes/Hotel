@@ -1,0 +1,78 @@
+.star-rating {
+    position: relative;
+    display: block;
+    font-size: 1.5rem;
+    pointer-events: none;
+
+    &_white &__label,
+    &_white .icon-star {
+        color: $color-white;
+    }
+
+    &_extra-small {
+        font-size: 1rem;
+    }
+
+    &_small {
+        font-size: 1.4rem;
+    }
+
+    &_small &__stars {
+        gap: .6rem;
+    }
+
+    &_small &__label {
+        padding: 0 .3rem;
+    }
+
+    &_form {
+        pointer-events: all;
+    }
+
+    &_form &__label:hover {
+        cursor: pointer;
+    }
+
+    &_form &__label:hover,
+    &_form &__label:hover ~ &__label,
+    &__input:checked ~ &__label {
+        color: red;
+    }
+
+    &__stars {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    &__input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &__label {
+        line-height: 1;
+        color: $color-gray-secondary;
+        padding: 0 .25rem;
+
+        &:first-child {
+            padding-right: 0;
+        }
+
+        &:last-child {
+            padding-left: 0;
+        }
+    }
+}

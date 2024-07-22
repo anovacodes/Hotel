@@ -1,0 +1,214 @@
+.hero {
+    height: calc(100svh - 11.8rem);
+    min-height: 70rem;
+    margin-top: 11.8rem;
+    position: relative;
+
+    @include breakpoint($tablet) {
+        min-height: 60rem;
+    }
+
+    @include breakpoint($mobile) {
+        min-height: 50rem;
+    }
+}
+
+.hero-slider {
+    height: 100%;
+    background-color: #b3b3b3;
+
+    & .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    & .swiper-slide {
+        display: grid;
+        place-content: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::before {
+            position: absolute;
+            inset: 0;
+            content: "";
+            display: block;
+            background: linear-gradient(180deg, rgba(#000, 0.15), rgba(#000, .55));
+        }
+    }
+
+    & .swiper-slide-active &__info {
+        transition: opacity 1s ease,
+                    scale 1s ease;
+        opacity: 1;
+        scale: 1;
+    }
+
+    & .swiper-pagination {
+        bottom: 1.8rem;
+    }
+
+    & .swiper-pagination-bullet {
+        width: 1rem;
+        height: 1rem;
+        background-color: rgba($color-white, .7);
+        border-radius: 0;
+        margin: .5rem !important;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &-active {
+            background-color: $color-white;
+        }
+    }
+
+    &__info {
+        width: 70%;
+        text-align: center;
+        transform: translateY(-30%);
+        margin: 0 auto;
+        opacity: 0;
+        scale: 0;
+
+        @include breakpoint($tablet) {
+            width: 90%;
+        }
+
+        @include breakpoint($mobile-small) {
+            width: 95%;
+        }
+    }
+
+    &__suptitle {
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: .32rem;
+        text-transform: uppercase;
+        color: $color-white;
+        cursor: default;
+        will-change: transform;
+    }
+
+    &__line {
+        width: 3.1rem;
+        height: .1rem;
+        background-color: $color-white;
+        border: none;
+        margin: 2.2rem auto 2.6rem;
+        will-change: transform;
+
+        @include breakpoint($mobile-small) {
+            margin: 1.8rem auto 2.2rem;
+        }
+    }
+
+    &__title {
+        font-family: $font-gilda;
+        font-size: 7rem;
+        font-weight: 400;
+        line-height: 1.3;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: 3.5rem;
+        cursor: default;
+        will-change: transform;
+
+        @include breakpoint($tablet) {
+            font-size: 4.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @include breakpoint($mobile) {
+            font-size: 4.2rem;
+            margin-bottom: 2rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 2.8rem;
+        }
+    }
+
+    &__button {
+        width: 19.2rem;
+        margin: 0 auto;
+        will-change: transform;
+    }
+}
+
+.booking-hero {
+    width: 60%;
+    max-width: 72rem;
+    position: absolute;
+    display: flex;
+    bottom: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+
+    @include breakpoint($tablet) {
+        width: 80%;
+    }
+
+    @include breakpoint($mobile) {
+        display: none;
+    }
+
+    &_mobile {
+        display: none;
+        position: static;
+
+        @include breakpoint($mobile) {
+            width: 100%;
+            display: flex;
+            transform: translateX(0);
+        }
+
+        @include breakpoint($mobile-medium) {
+            flex-direction: column;
+        }
+    }
+
+    &_mobile &__dates {
+        @include breakpoint($mobile-medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__dates {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        flex: 1;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        background-color: $color-white;
+    }
+
+    &__button {
+        flex-basis: 25%;
+        font-size: 1.2rem;
+        line-height: 1.75;
+        letter-spacing: .238rem;
+        text-transform: uppercase;
+        user-select: none;
+        color: $color-white;
+        background-color: $color-dark;
+        padding: 4rem;
+        transition: background-color .15s ease;
+
+        &:focus,
+        &:hover {
+            background-color: $color-dark-hover;
+        }
+    }
+}
+
+
+
+

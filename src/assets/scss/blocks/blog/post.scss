@@ -1,0 +1,76 @@
+.post {
+    &__section {
+        padding: 3.5rem 0;
+        border-bottom: 0.2rem solid #f9f9f9;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__gallery {
+        margin: 2rem 0 4rem;
+    }
+
+    &__title {
+        font-family: $font-gilda;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.4;
+        color: $color-dark;
+        margin-bottom: 3rem;
+    }
+
+    &__comments {
+        & > .comments > .comments__item:first-child {
+            padding-top: 0;
+        }
+    }
+
+    &__button {
+        width: 15.3rem;
+        margin: 5rem auto 0;
+    }
+}
+
+.gallery-post {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 0;
+
+    @include breakpoint($mobile-medium) {
+        grid-template-columns: 1fr;
+    }
+
+    &__item {
+        height: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        @include breakpoint($mobile-medium) {
+            height: 40rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            height: 30rem;
+        }
+
+        @include breakpoint($mobile-dino) {
+            height: 28rem;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+    }
+}

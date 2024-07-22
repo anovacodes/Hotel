@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @@include('./partials/head.html', {
+        "title": "Hotel - Contact Us"
+    })
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        @@include('./partials/header.html')
+
+        @@include('./partials/subheader.html', {
+            title: "Contact",
+            img: "./assets/images/subheader/4.jpg",
+            classes: "subheader_clear"
+        })
+
+        <div class="contact">
+            <div class="container">
+                <div class="contact__inner">
+                    <div class="contact__col">
+                        <h2 class="contact__title">Drop us a line</h2>
+                        <p class="contact__text">Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim.
+                            Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna
+                            feugiat rutrum. Nam nulla ipsum, venenatis malesuada felis quis, ultricies
+                            convallis neque. Pellentesque tristique fringilla tempus. Vivamus bibendum nibh
+                            in dolor pharetra, a euismod nulla dignissim.</p>
+                        
+                        <form class="contact-form" action="#">
+                            <div class="contact-form__fields">
+                                <div class="contact-form__row contact-form__row_double">
+                                    <div class="contact-form__field">
+                                        <label class="label" for="name">Name:</label>
+                                        <input class="input" id="name" type="text" name="name" autocomplete="given-name">
+                                    </div>
+
+                                    <div class="contact-form__field">
+                                        <label class="label" for="surname">Surname:</label>
+                                        <input class="input" id="surname" type="text" name="surname" autocomplete="family-name">
+                                    </div>
+                                </div>
+
+                                <div class="contact-form__row contact-form__row_double">
+                                    <div class="contact-form__field">
+                                        <label class="label" for="email">Email:</label>
+                                        <input class="input" id="email" type="email" name="email" autocomplete="email">
+                                    </div>
+
+                                    <div class="contact-form__field">
+                                        <label class="label" for="phone">Phone:</label>
+                                        <input class="input" id="phone" type="text" name="phone" autocomplete="tel">
+                                    </div>
+                                </div>
+
+                                <div class="contact-form__row">
+                                    <div class="contact-form__field">
+                                        <label class="label" for="message">Message:</label>
+                                        <textarea class="textarea" name="message" id="message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @@include("./partials/UI/button.html", {
+                                value: "Send Now",
+                                options: {
+                                    type: "button",
+                                    buttonType: "submit"
+                                },
+                                classes: "contact-form__button button_big"
+                            })
+                        </form>
+                    </div>
+
+                    <div class="contact__col">
+                        <div class="map" id="map"></div>
+
+                        <div class="contact__info info-contact">
+                            <ul class="info-contact__list">
+                                <li class="info-contact__item">
+                                    <span class="info-contact__key">Address:</span>
+                                    <span class="info-contact__value">Avenue Piccad 234</span>
+                                </li>
+
+                                <li class="info-contact__item">
+                                    <span class="info-contact__key">Phone:</span>
+                                    <span class="info-contact__value">00837920234</span>
+                                </li>
+
+                                <li class="info-contact__item">
+                                    <span class="info-contact__key">City:</span>
+                                    <span class="info-contact__value">New York ( US )</span>
+                                </li>
+
+                                <li class="info-contact__item">
+                                    <span class="info-contact__key">Email:</span>
+                                    <span class="info-contact__value">info@hotel.com</span>
+                                </li>
+
+                                <li class="info-contact__item">
+                                    <span class="info-contact__key">Check-In:</span>
+                                    <span class="info-contact__value">15:00 am</span>
+                                </li>
+
+                                <li class="info-contact__item">
+                                    <span class="info-contact__key">Check-Out:</span>
+                                    <span class="info-contact__value">11:00 am</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="contact__support support-contact">
+                            <p class="support-contact__text">AVAILABLE AT 10AM – 8PM</p>
+                            <a href="tel:+2025550116" class="support-contact__tel">+ 202 555 0116</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('./partials/footer.html')
+        @@include('./partials/mobile-menu.html')
+    </div>
+
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "AIzaSyANeDRCjAYxDGCA4OMo9b4pVSTVpEya6Gg", v: "weekly"});</script>
+    
+</body>
+</html>

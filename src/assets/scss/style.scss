@@ -1,0 +1,91 @@
+@import "fonts";
+@import "reset";
+@import "scrollbar";
+@import "mixins";
+@import "variables";
+@import "selection";
+
+body {
+    font-family: $font-roboto;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: $line-height;
+    color: $color-gray;
+    background-color: $color-white;
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    overflow: hidden;
+}
+
+.container {
+    width: min(117rem, 100% - 3rem);
+    margin-inline: auto;
+}
+
+@import "blocks/header";
+@import "blocks/UI/logo";
+@import "blocks/UI/burger";
+@import "blocks/UI/weather";
+@import "blocks/UI/social";
+@import "blocks/UI/button";
+@import "blocks/UI/datepicker";
+@import "blocks/UI/calendar";
+@import "blocks/UI/star-rating";
+@import "blocks/UI/textarea";
+@import "blocks/UI/input";
+@import "blocks/UI/checkbox";
+@import "blocks/UI/label";
+@import "blocks/UI/simple-dropdown";
+@import "blocks/UI/pagination";
+@import "blocks/UI/dropdown";
+@import "blocks/UI/tag";
+@import "blocks/menu/menu";
+@import "blocks/menu/mobile-menu";
+@import "blocks/menu/footer-menu";
+@import "blocks/hero";
+@import "blocks/section";
+@import "blocks/subheader";
+@import "blocks/relax";
+@import "blocks/resort";
+@import "blocks/packages";
+@import "blocks/phrase";
+@import "blocks/order";
+@import "blocks/info";
+@import "blocks/payment-options";
+@import "blocks/add-extra-services";
+@import "blocks/services";
+@import "blocks/contact";
+@import "blocks/contact-form";
+@import "blocks/gallery-slider";
+@import "blocks/sidebar";
+@import "blocks/main";
+@import "blocks/content";
+@import "blocks/reservation";
+@import "blocks/filters";
+@import "blocks/sort";
+@import "blocks/map";
+@import "blocks/modal";
+@import "blocks/big-letter";
+@import "blocks/tags";
+@import "blocks/reviews";
+@import "blocks/comments";
+@import "blocks/comment";
+@import "blocks/blog/blog";
+@import "blocks/blog/post";
+@import "blocks/rooms/rooms";
+@import "blocks/rooms/best-rooms";
+@import "blocks/rooms/room-card";
+@import "blocks/rooms/room-header";
+@import "blocks/rooms/room";
+@import "blocks/rooms/similar-rooms";
+@import "blocks/wysiwyg-editor";
+@import "blocks/footer";
+
+

@@ -1,0 +1,138 @@
+.packages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint($tablet) {
+        grid-template-columns: 1fr !important;
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include breakpoint($mobile-medium) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__image {
+        min-width: 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-gray-secondary;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            background-color: rgba(28, 28, 28, 0.15);
+        }
+
+        & > img {
+            height: 100%;
+            min-width: 100%;
+            min-height: 30rem;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $color-dark;
+        padding: 9rem 13rem 9.6rem 10rem;
+
+        @include breakpoint($laptop) {
+            padding: 9rem;
+        }
+
+        @include breakpoint($tablet) {
+            grid-row: 1 / 2;
+        }
+
+        @include breakpoint($mobile) {
+            padding: 6rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            padding: 6rem 1.5rem;
+        }
+    }
+
+    &__suptitle {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: .07rem;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-bottom: 1.5rem;
+    }
+
+    &__title {
+        width: 90%;
+        font-family: $font-gilda;
+        font-size: 8rem;
+        font-weight: 400;
+        line-height: 1;
+        color: $color-white;
+
+        @include line-clamp(3);
+
+        @include breakpoint($mobile) {
+            font-size: 5.2rem;
+            line-height: 1.1;
+        }
+
+        @include breakpoint($mobile-small) {
+            font-size: 3.4rem;
+            line-height: 1.2;
+        }
+
+        & > span {
+            display: block;
+            color: $color-brown;
+        }
+    }
+
+    &__text {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 7.5rem;
+        font-size: 1.4rem;
+        font-weight: 300;
+        letter-spacing: .084rem;
+        color: $color-gray;
+        margin: 4rem 0;
+
+        @include breakpoint($laptop) {
+            gap: 3rem 4.5rem;
+        }
+
+        @include breakpoint($mobile-medium) {
+            grid-template-columns: 1fr;
+        }
+
+        & > p {
+            @include line-clamp(10);
+        }
+    }
+
+    &__button {
+        width: 22rem;
+        background-color: $color-black;
+
+        @include breakpoint($mobile-medium) {
+            margin: 0 auto;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $color-dark-hover
+        }
+    }
+}

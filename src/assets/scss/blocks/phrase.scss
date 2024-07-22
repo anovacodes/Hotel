@@ -1,0 +1,24 @@
+.phrase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        width: 66%;
+        font-family: $font-gilda;
+        font-size: 2.5rem;
+        line-height: 1.8;
+        text-align: center;
+        color: $color-dark;
+
+        @include breakpoint($mobile) {
+            width: 80%;
+            font-size: 2.2rem;
+        }
+
+        @include breakpoint($mobile-small) {
+            width: 85%;
+            font-size: 2rem;
+        }
+    }
+}

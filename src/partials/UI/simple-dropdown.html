@@ -1,0 +1,15 @@
+<div class="simple-dropdown @@classes">
+    <p class="simple-dropdown__label">@@label</p>
+
+    <div class="simple-dropdown__icon">
+        <i class="icon-arrow"></i>
+    </div>
+
+    <ul class="simple-dropdown__list">
+        @@for (var i = 0; i < items.length; i++) {
+            <li class="simple-dropdown__item">
+                <a class="simple-dropdown__link" href="#">`+items[i]+`</a>
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,46 @@
+<div class="datepicker @@classes.datepicker">
+    <div class="datepicker__inner">
+        @@if(context.showTitle) {
+            <h6 class="datepicker__title @@classes.title">@@info.title</h6>
+        }
+
+        <div class="datepicker__date">
+            <h3 class="datepicker__day @@classes.day" data-type="num">@@info.num</h3>
+
+            @@if(!context.onlyDay) {
+                <div class="datepicker__months">
+                    @@if(context.doubleArrows) {
+                        <div class="datepicker__arrow datepicker__arrow_up" data-type="counter-button" data-action="increase">
+                            <i class="icon-arrow"></i>
+                        </div>
+                    } 
+                    
+                    @@if(!context.doubleArrows) {
+                        <p class="datepicker__month @@classes.month" data-type="month">@@info.month</p>
+                    }
+    
+                    <div class="datepicker__arrow" data-type="counter-button" data-action="decrease">
+                        <i class="icon-arrow"></i>
+                    </div>
+                </div>
+            }
+        </div>
+
+        @@if(context.showBottom) {
+            <div class="datepicker__bottom">
+                @@if(context.showYear) {
+                    <p class="datepicker__year" data-type="year">June, 2017</p>
+                }
+                <p class="datepicker__dayweek" data-type="dayweek">@@info.dayweek</p>
+            </div>
+        }
+    </div>
+
+    @@if(context.isPicker) {
+        <input class="datepicker__input" type="text" name="@@name" autocomplete="off" id="datepicker-@@id">
+    }
+
+    @@if(context.isCounter) {
+        <input type="hidden" name="@@name" value="@@info.num" data-type="number-input">
+    }
+</div>
