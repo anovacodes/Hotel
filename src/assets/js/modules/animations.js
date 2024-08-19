@@ -93,8 +93,7 @@ const useResortAnimation = () => {
             duration: 1
         }, 0)
         .from("#resort-image-3", {
-            transformOrigin: "bottom",
-            scaleY: 0,
+            yPercent: 10,
             duration: 1
         }, 0)
 }
@@ -145,12 +144,18 @@ const useBestRoomsAnimation = () => {
         }
     })
 
+    const bigCardHeader = bigCard.querySelector("[data-type='room-card__header']")
+    const bigCardContent = bigCard.querySelector("[data-type='room-card__content']")
+
     tl
-        .from(bigCard, {
-            transformOrigin: "top center",
-            scaleY: 0,
+        .from(bigCardHeader, {
+            height: 0,
             opacity: 0,
             duration: 1
+        }, 0)
+        .from(bigCardContent, {
+            opacity: 0,
+            duration: 2
         }, 0)
         .from(miniCards, {
             xPercent: 30,

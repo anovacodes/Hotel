@@ -1,5 +1,5 @@
 <div class="room-card @@classes">
-    <a class="room-card__header" style="background-image: url(@@img)" href="./room.html">
+    <a class="room-card__header" style="background-image: url(@@img)" href="./room.html" data-type="room-card__header">
         <div class="room-card__overlay overlay-room-card">
             <div class="overlay-room-card__content">
                 <div class="overlay-room-card__left">
@@ -39,7 +39,7 @@
     </a>
 
     @@if (context.showContent) {
-        <div class="room-card__content">
+        <div class="room-card__content" data-type="room-card__content">
             @@if (context.showBody) {
                 <div class="room-card__body">
                     <a class="room-card__title" href="./room.html">
