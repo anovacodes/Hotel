@@ -1,0 +1,109 @@
+<div class="subheader @@classes" style="background-image: url(@@img);">
+    <div class="container">
+        <div class="subheader__inner">
+            @@if (context.title) {
+                <h1 class="subheader__title">@@title</h1>
+            }
+
+            @@if (context.showSteps) {
+                <div class="subheader__steps steps-subheader">
+                    <ul class="steps-subheader__list">
+                        <li class="steps-subheader__item steps-subheader__item_active">search</li>
+                        <li class="steps-subheader__item">booking</li>
+                        <li class="steps-subheader__item">CHECKOUT</li>
+                        <li class="steps-subheader__item">thank you</li>
+                    </ul>
+                </div>
+            }
+
+            @@if (context.showInfo) {
+                <div class="subheader__info info-subheader">
+                    <ul class="info-subheader__list">
+                        <li class="info-subheader__item">
+                            <div class="info-subheader__avatar">
+                                <img src="assets/images/avatars/1.jpg" alt="ava">
+                            </div>
+                            <span class="info-subheader__text">JOHN DOE</span>
+                        </li>
+                        <li class="info-subheader__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" width="512px" height="512px">
+                                <g>
+                                    <path d="M50.25,11c-1.563-0.838-11.282-6.07-16.623-9.421C32.715,0.612,31.431,0,30,0s-2.715,0.612-3.627,1.579   C21.031,4.929,11.313,10.162,9.75,11H0v49h60V11H50.25z M32.223,3.004c0.004,0.005,0.005,0.011,0.01,0.016   c0.243,0.273,0.511,0.686,0.657,1.216c0.012,0.045,0.032,0.087,0.042,0.134C32.974,4.564,33,4.774,33,5c0,1.654-1.346,3-3,3   s-3-1.346-3-3c0-0.226,0.026-0.436,0.069-0.63c0.01-0.046,0.029-0.087,0.041-0.132c0.146-0.532,0.414-0.944,0.657-1.218   c0.004-0.005,0.005-0.011,0.01-0.016C28.327,2.393,29.115,2,30,2S31.673,2.393,32.223,3.004z M25.006,4.754   C25.002,4.836,25,4.918,25,5c0,2.757,2.243,5,5,5s5-2.243,5-5c0-0.082-0.002-0.164-0.006-0.246C38.587,6.89,43.029,9.351,46.051,11   H13.949C16.971,9.351,21.413,6.89,25.006,4.754z M10,13h40h8v5H2v-5H10z M2,58V20h56v38H2z" fill="#FFFFFF"/>
+                                    <circle cx="23" cy="28" r="1" fill="#FFFFFF"/>
+                                    <circle cx="30" cy="28" r="1" fill="#FFFFFF"/>
+                                    <circle cx="37" cy="28" r="1" fill="#FFFFFF"/>
+                                    <circle cx="44" cy="28" r="1" fill="#FFFFFF"/>
+                                    <circle cx="51" cy="28" r="1" fill="#FFFFFF"/>
+                                    <circle cx="9" cy="36" r="1" fill="#FFFFFF"/>
+                                    <circle cx="16" cy="36" r="1" fill="#FFFFFF"/>
+                                    <circle cx="23" cy="36" r="1" fill="#FFFFFF"/>
+                                    <circle cx="30" cy="36" r="1" fill="#FFFFFF"/>
+                                    <circle cx="37" cy="36" r="1" fill="#FFFFFF"/>
+                                    <circle cx="44" cy="36" r="1" fill="#FFFFFF"/>
+                                    <circle cx="51" cy="36" r="1" fill="#FFFFFF"/>
+                                    <circle cx="9" cy="43" r="1" fill="#FFFFFF"/>
+                                    <circle cx="16" cy="43" r="1" fill="#FFFFFF"/>
+                                    <circle cx="23" cy="43" r="1" fill="#FFFFFF"/>
+                                    <circle cx="30" cy="43" r="1" fill="#FFFFFF"/>
+                                    <circle cx="37" cy="43" r="1" fill="#FFFFFF"/>
+                                    <circle cx="44" cy="43" r="1" fill="#FFFFFF"/>
+                                    <circle cx="51" cy="43" r="1" fill="#FFFFFF"/>
+                                    <circle cx="9" cy="51" r="1" fill="#FFFFFF"/>
+                                    <circle cx="16" cy="51" r="1" fill="#FFFFFF"/>
+                                    <circle cx="23" cy="51" r="1" fill="#FFFFFF"/>
+                                    <circle cx="30" cy="51" r="1" fill="#FFFFFF"/>
+                                    <circle cx="37" cy="51" r="1" fill="#FFFFFF"/>
+                                </g>
+                            </svg>
+
+                            <span class="info-subheader__text">21 / 12 / 2017</span>
+                        </li>
+                        <li class="info-subheader__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" width="512px" height="512px">
+                                <g>
+                                    <path d="M16,20c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S18.206,20,16,20z M16,26c-1.103,0-2-0.897-2-2s0.897-2,2-2   s2,0.897,2,2S17.103,26,16,26z" fill="#FFFFFF"/>
+                                    <path d="M30,20c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S32.206,20,30,20z M30,26c-1.103,0-2-0.897-2-2s0.897-2,2-2   s2,0.897,2,2S31.103,26,30,26z" fill="#FFFFFF"/>
+                                    <path d="M44,20c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S46.206,20,44,20z M44,26c-1.103,0-2-0.897-2-2s0.897-2,2-2   s2,0.897,2,2S45.103,26,44,26z" fill="#FFFFFF"/>
+                                    <path d="M54,2H6C2.748,2,0,4.748,0,8v33c0,3.252,2.748,6,6,6h8v10c0,0.413,0.254,0.784,0.64,0.933C14.757,57.979,14.879,58,15,58   c0.276,0,0.547-0.114,0.74-0.327L25.442,47H54c3.252,0,6-2.748,6-6V8C60,4.748,57.252,2,54,2z M58,41c0,2.168-1.832,4-4,4H27.179   l3.579-4.161c0.36-0.419,0.313-1.051-0.105-1.41c-0.42-0.361-1.05-0.313-1.41,0.105l-4.982,5.793l0,0L16,54.413V46   c0-0.553-0.447-1-1-1H6c-2.168,0-4-1.832-4-4V8c0-2.168,1.832-4,4-4h48c2.168,0,4,1.832,4,4V41z" fill="#FFFFFF"/>
+                                </g>
+                            </svg>
+
+                            <span class="info-subheader__text">3 comments</span>
+                        </li>
+                    </ul>
+                </div>
+            }
+
+            @@if (context.showNav) {
+                <div class="subheader__single single-subheader">
+                    <ul class="single-subheader__list">
+                        <li class="single-subheader__item single-subheader__item_active">
+                            <a class="single-subheader__link" href="#description">DESCRIPTION</a>
+                        </li>
+                        <li class="single-subheader__item">
+                            <a class="single-subheader__link" href="#room-services">ROOM SERVICES</a>
+                        </li>
+                        <li class="single-subheader__item">
+                            <a class="single-subheader__link" href="#extra-services">EXTRA SERVICES</a>
+                        </li>
+                        <li class="single-subheader__item">
+                            <a class="single-subheader__link" href="#gallery">GALLERY</a>
+                        </li>
+                        <li class="single-subheader__item">
+                            <a class="single-subheader__link" href="#reviews">REVIEWS</a>
+                        </li>
+                    </ul>
+
+                    <div class="single-subheader__price">
+                        <span class="single-subheader__num">300</span>
+                        
+                        <div class="single-subheader__price-info">
+                            <div class="single-subheader__currency">$</div>
+                            <div class="single-subheader__time">/ FOR HOLIDAY</div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

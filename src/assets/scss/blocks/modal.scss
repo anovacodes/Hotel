@@ -1,0 +1,77 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+    transition: background-color .5s;
+
+    &.hidden {
+        z-index: $z-modal;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    &.active {
+        background-color: rgba(0, 0, 0, .5);
+        z-index: $z-modal;
+    }
+
+    &.active &__content {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    &__close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        display: block;
+        cursor: pointer;
+        z-index: calc($z-modal + 1);
+        transition: opacity .15s;
+
+        &:hover,
+        &:focus {
+            opacity: .7;
+        }
+
+        & > svg {
+            pointer-events: none;
+
+            & path {
+                fill: $color-white;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 75vh;
+        max-width: 85%;
+        transform: scale(0);
+        overflow: hidden;
+        border-radius: 1.2rem;
+        opacity: 0;
+        background-color: transparent;
+        transition: transform .5s,
+                    opacity .5s;
+    
+        &_video {
+            aspect-ratio: 16 / 9;
+            width: 60%;
+
+            @include breakpoint($mobile) {
+                width: 100%;
+            }
+
+            & > iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

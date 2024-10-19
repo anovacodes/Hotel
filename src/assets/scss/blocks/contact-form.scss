@@ -1,0 +1,28 @@
+.contact-form {
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        gap: 2.6rem;
+        margin-bottom: 2rem;
+    }
+
+    &__row {
+        &_double {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.6rem 1.2rem;
+
+            @include breakpoint($mobile) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    &__button {
+        width: 14.3rem;
+
+        @include breakpoint($mobile) {
+            width: 100%;
+        }
+    }
+}

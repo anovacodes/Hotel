@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @@include('./partials/head.html', {
+        "title": "Hotel - Single Post"
+    })
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        @@include('./partials/header.html')
+
+        @@include('./partials/subheader.html', {
+            title: "SINGLE POST",
+            img: "./assets/images/subheader/5.jpg",
+            showInfo: true,
+            classes: ""
+        })
+
+        <div class="content content_sidebar-right">
+            <div class="container">
+                <div class="content__inner">
+                    <main class="main">
+                        <div class="post">
+                            <div class="post__section">
+                                <div class="big-letter">
+                                    <p class="big-letter__text">Aivamus volutpat eros pulvinar velit 
+                                        laoreet, sit amet egestas erat 
+                                        dignissim. Sed quis rutrum tellus, sit
+                                        amet viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum, 
+                                        venenatis malesuada felis quis, ultricies convallis neque. Pellentesque tristique fringilla tempus.
+                                    </p>
+
+                                    <p class="big-letter__text">Vivamus volutpat eros pulvinar velit laoreet, sit amet
+                                        egestas erat dignissim. Sed quis rutrum tellus, sit
+                                        amet viverra felis. Cras sagittis sem sit amet urna
+                                        feugiat rutrum. Nam nulla ipsum, venenatis
+                                        malesuada felis quis, ultricies convallis neque.
+                                        Pellentesque tristique fringilla tempus.
+                                    </p>
+                                </div>
+
+                                <div class="wysiwyg-editor">
+                                    <h2>Our Latest Rooms</h2>
+                                    <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet
+                                        viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum, venenatis malesuada felis
+                                        quis, ultricies convallis neque. Pellentesque tristique fringilla tempus. Vivamus bibendum nibh in dolor
+                                        pharetra, a euismod nulla dignissim. Aenean viverra tincidunt nibh, in imperdiet nunc. Suspendisse eu ante
+                                        pretium, consectetur leo at, congue quam. Nullam hendrerit porta ante vitae tristique. Vestibulum ante ipsum
+                                        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ligula libero, feugiat faucibus
+                                        mattis eget, pulvinar et ligula.</p>
+                                </div>
+
+                                <ul class="post__gallery gallery-post">
+                                    <li class="gallery-post__item">
+                                        <img class="gallery-post__image" src="assets/images/rooms/6.jpeg" alt="img">
+                                    </li>
+
+                                    <li class="gallery-post__item">
+                                        <img class="gallery-post__image" src="assets/images/rooms/4.jpeg" alt="img">
+                                    </li>
+                                </ul>
+
+                                <div class="wysiwyg-editor">
+                                    <h2>Special Guest Interview</h2>
+                                    <p>Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet
+                                        viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum, venenatis malesuada felis
+                                        quis, ultricies convallis neque. Pellentesque tristique fringilla tempus. Vivamus bibendum nibh in dolor
+                                        pharetra, a euismod nulla dignissim. Aenean viverra tincidunt nibh, in imperdiet nunc. Suspendisse eu ante
+                                        pretium, consectetur leo at, congue quam. Nullam hendrerit porta ante vitae tristique. Vestibulum ante ipsum
+                                        primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum ligula libero, feugiat faucibus
+                                        mattis eget, pulvinar et ligula.</p>
+                                </div>
+
+                                <div class="tags">
+                                    <h4 class="tags__title">Tag:</h4>
+
+                                    <ul class="tags__list">
+                                        <li class="tags__item">
+                                            <a class="tag" href="#"># Hotel</a>
+                                        </li>
+                                        <li class="tags__item">
+                                            <a class="tag" href="#"># Room</a>
+                                        </li>
+                                        <li class="tags__item">
+                                            <a class="tag" href="#">Spa</a>
+                                        </li>
+                                        <li class="tags__item">
+                                            <a class="tag" href="#">Drink & Food</a>
+                                        </li>
+                                        <li class="tags__item">
+                                            <a class="tag" href="#"># King Size</a>
+                                        </li>
+                                        <li class="tags__item">
+                                            <a class="tag" href="#"># No Smoking</a>
+                                        </li>
+                                        <li class="tags__item">
+                                            <a class="tag" href="#">Luxury</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <section class="post__section">
+                                <h3 class="post__title">2 Comments</h3>
+
+                                <div class="post__comments">
+                                    <ul class="comments">
+                                        <li class="comments__item">
+                                            <div class="comment">
+                                                <div class="comment__header">
+                                                    <div>
+                                                        <div class="comment__avatar">
+                                                            <img src="assets/images/avatars/1.jpg" alt="avatar">
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="comment__author">Jess Doe</div>
+                
+                                                    <div class="comment__details">
+                                                        <div class="comment__date">September 4, 2015 at 1:24 pm</div>
+                
+                                                        <div class="comment__review">Awesome Hotel</div>
+                
+                                                        <div class="comment__rating" data-value="7.5"></div>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="comment__body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ipsum sit amet ex pulvinar mattis. Pellentesque vitae purus viverra, aliquet lacus in, fringilla massa. Suspendisse ac est a nisi aliquet sollicitudin. Interdum et malesuada fames.</p>
+                                                </div>
+                
+                                                <div class="comment__footer">
+                                                    <button class="comment__more" type="button" data-type="show-more">
+                                                        full info
+                
+                                                        <i class="icon-arrow"></i>
+                                                    </button>
+                
+                                                    @@include("./partials/UI/button.html", {
+                                                        value: "REPLY",
+                                                        options: {
+                                                            type: "button",
+                                                            buttonType: "button"
+                                                        },
+                                                        classes: "comment__button button_black button_regular"
+                                                    })
+                                                </div>
+                                            </div>
+                                        </li>
+                
+                                        <li class="comments__item">
+                                            <div class="comment">
+                                                <div class="comment__header">
+                                                    <div>
+                                                        <div class="comment__avatar">
+                                                            <img src="assets/images/avatars/3.jpg" alt="avatar">
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="comment__author">Mike Johnson</div>
+                
+                                                    <div class="comment__details">
+                                                        <div class="comment__date">September 4, 2015 at 1:24 pm</div>
+                
+                                                        <div class="comment__review">Awesome Hotel</div>
+                
+                                                        <div class="comment__rating" data-value="4.5"></div>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="comment__body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ipsum sit amet ex pulvinar mattis. Pellentesque vitae purus viverra, aliquet lacus in, fringilla massa. Suspendisse ac est a nisi aliquet sollicitudin. Interdum et malesuada fames. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ipsum sit amet ex pulvinar mattis. Pellentesque vitae purus viverra, aliquet lacus in, fringilla massa. Suspendisse ac est a nisi aliquet sollicitudin. Interdum et malesuada fames.</p>
+                                                </div>
+                
+                                                <div class="comment__footer">
+                                                    <button class="comment__more" type="button" data-type="show-more">
+                                                        full info
+                
+                                                        <i class="icon-arrow"></i>
+                                                    </button>
+                
+                                                    @@include("./partials/UI/button.html", {
+                                                        value: "REPLY",
+                                                        options: {
+                                                            type: "button",
+                                                            buttonType: "button"
+                                                        },
+                                                        classes: "comment__button button_black button_regular"
+                                                    })
+                                                </div>
+                                            </div>
+                                        </li>
+                
+                                        <li class="comments__item">
+                                            <div class="comment">
+                                                <div class="comment__header">
+                                                    <div>
+                                                        <div class="comment__avatar">
+                                                            <img src="assets/images/avatars/4.jpg" alt="avatar">
+                                                        </div>
+                                                    </div>
+                
+                                                    <div class="comment__author">John Doe</div>
+                
+                                                    <div class="comment__details">
+                                                        <div class="comment__date">September 4, 2015 at 1:24 pm</div>
+                
+                                                        <div class="comment__review">Awesome Hotel</div>
+                
+                                                        <div class="comment__rating" data-value="9.5"></div>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="comment__body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ipsum sit amet ex pulvinar mattis. Pellentesque vitae purus viverra, aliquet lacus in, fringilla massa. Suspendisse ac est a nisi aliquet sollicitudin. Interdum et malesuada fames.</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ipsum sit amet ex pulvinar mattis. Pellentesque vitae purus viverra, aliquet lacus in, fringilla massa. Suspendisse ac est a nisi aliquet sollicitudin. Interdum et malesuada fames. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ipsum sit amet ex pulvinar mattis. Pellentesque vitae purus viverra, aliquet lacus in, fringilla massa. Suspendisse ac est a nisi aliquet sollicitudin. Interdum et malesuada fames.</p>
+                                                </div>
+                
+                                                <div class="comment__footer">
+                                                    <button class="comment__more" type="button" data-type="show-more">
+                                                        full info
+                
+                                                        <i class="icon-arrow"></i>
+                                                    </button>
+                
+                                                    @@include("./partials/UI/button.html", {
+                                                        value: "REPLY",
+                                                        options: {
+                                                            type: "button",
+                                                            buttonType: "button"
+                                                        },
+                                                        classes: "comment__button button_black button_regular"
+                                                    })
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+            
+                                    <button class="post__button button button_black" data-type="reviews-button">Show More</button>
+                                </div>
+                            </section>
+                            
+                            <section class="post__section">
+                                <h3 class="post__title">Leave a Comment</h3>
+
+                                <form class="contact-form" action="#">
+                                    <div class="contact-form__fields">
+                                        <div class="contact-form__row contact-form__row_double">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="name">Name:</label>
+                                                <input class="input" id="name" type="text" name="name" autocomplete="given-name">
+                                            </div>
+        
+                                            <div class="contact-form__field">
+                                                <label class="label" for="surname">Surname:</label>
+                                                <input class="input" id="surname" type="text" name="surname" autocomplete="family-name">
+                                            </div>
+                                        </div>
+        
+                                        <div class="contact-form__row contact-form__row_double">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="email">Email:</label>
+                                                <input class="input" id="email" type="email" name="email" autocomplete="email">
+                                            </div>
+        
+                                            <div class="contact-form__field">
+                                                <label class="label" for="phone">Phone:</label>
+                                                <input class="input" id="phone" type="text" name="phone" autocomplete="tel">
+                                            </div>
+                                        </div>
+        
+                                        <div class="contact-form__row">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="message">Message:</label>
+                                                <textarea class="textarea" name="message" id="message"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    @@include("./partials/UI/button.html", {
+                                        value: "Send Now",
+                                        options: {
+                                            type: "button",
+                                            buttonType: "submit"
+                                        },
+                                        classes: "contact-form__button button_big"
+                                    })
+                                </form>
+                            </section>
+                        </div>
+                    </main>
+
+                    <aside class="sidebar">
+                        <ul class="sidebar__list">
+                            <li class="sidebar__item">
+                                <div class="calendar">
+                                    <div class="dycalendar-container" id="dycalendar-today-with-skin-shadow"></div>
+                                </div>
+                            </li>
+
+                            <li class="sidebar__item">
+                                <h3 class="sidebar__title">Tags Cloud</h3>
+
+                                <div class="sidebar__content">
+                                    <div class="sidebar__tags tags-sidebar">
+                                        <ul class="tags-sidebar__list">
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#"># Hotel</a>
+                                            </li>
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#"># Room</a>
+                                            </li>
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#">Spa</a>
+                                            </li>
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#">Drink & Food</a>
+                                            </li>
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#"># King Size</a>
+                                            </li>
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#"># No Smoking</a>
+                                            </li>
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#">Gym</a>
+                                            </li>
+
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#"># Swimming</a>
+                                            </li>
+
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#">Girls</a>
+                                            </li>
+
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#">Breakfast</a>
+                                            </li>
+
+                                            <li class="tags-sidebar__item">
+                                                <a class="tag" href="#"># Wellness</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="sidebar__item">
+                                <h3 class="sidebar__title">Best Rooms</h3>
+
+                                <div class="sidebar__content">
+                                    <div class="sidebar__rooms rooms-sidebar">
+                                        <ul class="rooms-sidebar__list">
+                                            <li class="rooms-sidebar__item">
+                                                <a class="rooms-sidebar__image" href="#">
+                                                    <img src="assets/images/rooms/1.jpeg" alt="image">
+                                                </a>
+
+                                                <div class="rooms-sidebar__info">
+                                                    <a class="rooms-sidebar__link" href="#">
+                                                        <h4 class="rooms-sidebar__title">Family Room</h4>
+                                                    </a>
+
+                                                    <p class="rooms-sidebar__text">by John Doe on 21/12/2016</p>
+
+                                                    @@include("./partials/UI/button.html", {
+                                                        value: "Book Now",
+                                                        options: {
+                                                            type: "link",
+                                                            href: "#"
+                                                        },
+                                                        classes: "rooms-sidebar__button button_black button_regular"
+                                                    })
+                                                </div>
+                                            </li>
+
+                                            <li class="rooms-sidebar__item">
+                                                <a class="rooms-sidebar__image" href="#">
+                                                    <img src="assets/images/rooms/2.jpeg" alt="image">
+                                                </a>
+
+                                                <div class="rooms-sidebar__info">
+                                                    <a class="rooms-sidebar__link" href="#">
+                                                        <h4 class="rooms-sidebar__title">Family Room</h4>
+                                                    </a>
+
+                                                    <p class="rooms-sidebar__text">by Jane Doe on 08/11/2019</p>
+
+                                                    @@include("./partials/UI/button.html", {
+                                                        value: "Book Now",
+                                                        options: {
+                                                            type: "link",
+                                                            href: "#"
+                                                        },
+                                                        classes: "rooms-sidebar__button button_black button_regular"
+                                                    })
+                                                </div>
+                                            </li>
+
+                                            <li class="rooms-sidebar__item">
+                                                <a class="rooms-sidebar__image" href="#">
+                                                    <img src="assets/images/rooms/3.jpeg" alt="image">
+                                                </a>
+
+                                                <div class="rooms-sidebar__info">
+                                                    <a class="rooms-sidebar__link" href="#">
+                                                        <h4 class="rooms-sidebar__title">Family Room</h4>
+                                                    </a>
+
+                                                    <p class="rooms-sidebar__text">by Max Smith on 24/02/2015</p>
+
+                                                    @@include("./partials/UI/button.html", {
+                                                        value: "Book Now",
+                                                        options: {
+                                                            type: "link",
+                                                            href: "#"
+                                                        },
+                                                        classes: "rooms-sidebar__button button_black button_regular"
+                                                    })
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="sidebar__item">
+                                <h3 class="sidebar__title">Search</h3>
+
+                                <div class="sidebar__content sidebar__content_search">
+                                    <form class="sidebar__search search-sidebar" action="#">
+                                        <input class="input search-sidebar__input" type="search" name="search">
+                                    </form>
+                                </div>
+                            </li>
+
+                            <li class="sidebar__item">
+                                <h3 class="sidebar__title">Categories</h3>
+
+                                <div class="sidebar__content sidebar__content_categories">
+                                    <div class="sidebar__categories categories-sidebar">
+                                        <ul class="categories-sidebar__list">
+                                            <li class="categories-sidebar__item">
+                                                <a class="categories-sidebar__link" href="#">
+                                                    <i class="icon-arrow"></i>
+
+                                                    Luxury Hotels ( 10 ) 
+                                                </a>
+                                            </li>
+
+                                            <li class="categories-sidebar__item">
+                                                <a class="categories-sidebar__link" href="#">
+                                                    <i class="icon-arrow"></i>
+
+                                                    Family Residence ( 20 )
+                                                </a>
+                                            </li>
+
+                                            <li class="categories-sidebar__item">
+                                                <a class="categories-sidebar__link" href="#">
+                                                    <i class="icon-arrow"></i>
+
+                                                    Relax Villas ( 12 )
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="sidebar__item">
+                                <h3 class="sidebar__title">Our Branches</h3>
+
+                                <div class="sidebar__content">
+                                    <div class="sidebar__rooms rooms-sidebar">
+                                        <ul class="rooms-sidebar__list">
+                                            <li class="rooms-sidebar__item">
+                                                <a class="rooms-sidebar__image" href="#">
+                                                    <img src="assets/images/rooms/4.jpeg" alt="image">
+                                                </a>
+
+                                                <div class="rooms-sidebar__info">
+                                                    <a class="rooms-sidebar__link" href="#">
+                                                        <h4 class="rooms-sidebar__title">Hotel England London</h4>
+                                                    </a>
+
+                                                    <p class="rooms-sidebar__text">by John Doe on 21/12/2016</p>
+
+                                                    @@include("./partials/UI/star-rating.html", {
+                                                        id: 2,
+                                                        stars: 3,
+                                                        onlyStars: true,
+                                                        classes: "star-rating_small"
+                                                    })
+                                                </div>
+                                            </li>
+
+                                            <li class="rooms-sidebar__item">
+                                                <a class="rooms-sidebar__image" href="#">
+                                                    <img src="assets/images/rooms/5.jpeg" alt="image">
+                                                </a>
+
+                                                <div class="rooms-sidebar__info">
+                                                    <a class="rooms-sidebar__link" href="#">
+                                                        <h4 class="rooms-sidebar__title">Hotel Miami</h4>
+                                                    </a>
+
+                                                    <p class="rooms-sidebar__text">by Jane Doe on 08/11/2019</p>
+
+                                                    @@include("./partials/UI/star-rating.html", {
+                                                        id: 3,
+                                                        stars: 5,
+                                                        onlyStars: true,
+                                                        classes: "star-rating_small"
+                                                    })
+                                                </div>
+                                            </li>
+
+                                            <li class="rooms-sidebar__item">
+                                                <a class="rooms-sidebar__image" href="#">
+                                                    <img src="assets/images/rooms/6.jpeg" alt="image">
+                                                </a>
+
+                                                <div class="rooms-sidebar__info">
+                                                    <a class="rooms-sidebar__link" href="#">
+                                                        <h4 class="rooms-sidebar__title">Hotel Kyiv</h4>
+                                                    </a>
+
+                                                    <p class="rooms-sidebar__text">by Max Smith on 24/02/2015</p>
+
+                                                    @@include("./partials/UI/star-rating.html", {
+                                                        id: 4,
+                                                        stars: 2,
+                                                        onlyStars: true,
+                                                        classes: "star-rating_small"
+                                                    })
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="sidebar__item">
+                                <h3 class="sidebar__title">Our Offices</h3>
+
+                                <div class="sidebar__content">
+                                    <div class="sidebar__offices offices-sidebar">
+                                        <ul class="offices-sidebar__list">
+                                            <li class="offices-sidebar__item">
+                                                <span class="offices-sidebar__text">Mon - Wed</span>
+                                                <span class="offices-sidebar__text">8:00 - 17:00</span>
+                                            </li>
+
+                                            <li class="offices-sidebar__item">
+                                                <span class="offices-sidebar__text">Thursday</span>
+                                                <span class="offices-sidebar__text">9:00 - 17:30</span>
+                                            </li>
+
+                                            <li class="offices-sidebar__item">
+                                                <span class="offices-sidebar__text">Friday</span>
+                                                <span class="offices-sidebar__text">8:00 - 18:00</span>
+                                            </li>
+
+                                            <li class="offices-sidebar__item">
+                                                <span class="offices-sidebar__text">Saturday</span>
+                                                <span class="offices-sidebar__text">9:30 - 17:30</span>
+                                            </li>
+
+                                            <li class="offices-sidebar__item">
+                                                <span class="offices-sidebar__text">Sunday</span>
+                                                <span class="offices-sidebar__text offices-sidebar__text_closed">Closed</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        @@include('./partials/footer.html')
+        @@include('./partials/mobile-menu.html')
+    </div>
+</body>
+</html>

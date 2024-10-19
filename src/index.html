@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    @@include('./partials/head.html', {
+        "title": "Hotel"
+    })
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        @@include('./partials/header.html')
+
+        <div class="hero" id="hero">
+            <div class="swiper hero-slider" id="hero-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url(assets/images/hero/1.jpg)">
+                        <div class="container">
+                            <div class="hero-slider__inner">
+                                <div class="hero-slider__info">
+                                    <h2 class="hero-slider__suptitle" data-id="1" data-speed="40">LUXURY HOTEL & BEST RESORT</h2>
+                                    <hr class="hero-slider__line" data-speed="23" />
+                                    <h1 class="hero-slider__title" data-speed="30">ENJOY A LUXURY EXPERIENCE</h1>
+
+                                    @@include("./partials/UI/button.html", {
+                                        value: "ROOMS E SUITES",
+                                        options: {
+                                            type: "link",
+                                            href: "./rooms.html"
+                                        },
+                                        classes: "hero-slider__button button_outline button_white button_big"
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" style="background-image: url(assets/images/hero/2.jpg)">
+                        <div class="container">
+                            <div class="hero-slider__inner">
+                                <div class="hero-slider__info">
+                                    <h2 class="hero-slider__suptitle" data-id="2" data-speed="40">LUXURY HOTEL & BEST RESORT</h2>
+                                    <hr class="hero-slider__line" data-speed="23" />
+                                    <h1 class="hero-slider__title" data-speed="30">ENJOY A LUXURY EXPERIENCE</h1>
+
+                                    @@include("./partials/UI/button.html", {
+                                        value: "ROOMS E SUITES",
+                                        options: {
+                                            type: "link",
+                                            href: "./rooms.html"
+                                        },
+                                        classes: "hero-slider__button button_outline button_white button_big"
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image: url(assets/images/hero/3.jpeg)">
+                        <div class="container">
+                            <div class="hero-slider__inner">
+                                <div class="hero-slider__info">
+                                    <h2 class="hero-slider__suptitle" data-id="3" data-speed="40">LUXURY HOTEL & BEST RESORT</h2>
+                                    <hr class="hero-slider__line" data-speed="23" />
+                                    <h1 class="hero-slider__title" data-speed="30">ENJOY A LUXURY EXPERIENCE</h1>
+
+                                    @@include("./partials/UI/button.html", {
+                                        value: "ROOMS E SUITES",
+                                        options: {
+                                            type: "link",
+                                            href: "./rooms.html"
+                                        },
+                                        classes: "hero-slider__button button_outline button_white button_big"
+                                    })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination" id="hero-slider__pagination"></div>
+            </div>
+
+            <form class="hero__booking booking-hero" action="./rooms.html">
+                <div class="booking-hero__dates">
+
+                    @@include("./partials/UI/datepicker.html", {
+                        classes: {
+                            datepicker: "datepicker_white",
+                            title: "datepicker__title_gray",
+                            day: "datepicker__day_black",
+                            month: "datepicker__month_black"
+                        },
+                        showTitle: true,
+                        isPicker: true,
+                        id: "1-1",
+                        name: "startDate",
+                        info: {
+                            title: "CHECK-IN",
+                            num: 26,
+                            month: "Jun"
+                        }
+                    })
+
+                    @@include("./partials/UI/datepicker.html", {
+                        classes: {
+                            datepicker: "datepicker_white",
+                            title: "datepicker__title_gray",
+                            day: "datepicker__day_black",
+                            month: "datepicker__month_black"
+                        },
+                        showTitle: true,
+                        isPicker: true,
+                        id: "1-2",
+                        name: "endDate",
+                        info: {
+                            title: "CHECK-OUT",
+                            num: 27,
+                            month: "Jun"
+                        }
+                    })
+
+                    @@include("./partials/UI/datepicker.html", {
+                        classes: {
+                            datepicker: "datepicker_white datepicker_doublearrows",
+                            title: "datepicker__title_gray",
+                            day: "datepicker__day_black",
+                            month: "datepicker__month_black"
+                        },
+                        doubleArrows: true,
+                        showTitle: true,
+                        isCounter: true,
+                        name: "guests",
+                        info: {
+                            title: "GUESTS",
+                            num: 1
+                        }
+                    })
+
+                </div>
+                <button class="booking-hero__button" type="submit">CHECK AVAILABILITY</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <form class="hero__booking booking-hero_mobile" action="./rooms.html">
+                <div class="booking-hero__dates">
+
+                    @@include("./partials/UI/datepicker.html", {
+                        classes: {
+                            datepicker: "datepicker_white",
+                            title: "datepicker__title_gray",
+                            day: "datepicker__day_black",
+                            month: "datepicker__month_black"
+                        },
+                        showTitle: true,
+                        isPicker: true,
+                        id: "2-1",
+                        name: "startDate",
+                        info: {
+                            title: "CHECK-IN",
+                            num: 26,
+                            month: "Jun"
+                        }
+                    })
+
+                    @@include("./partials/UI/datepicker.html", {
+                        classes: {
+                            datepicker: "datepicker_white",
+                            title: "datepicker__title_gray",
+                            day: "datepicker__day_black",
+                            month: "datepicker__month_black"
+                        },
+                        showTitle: true,
+                        isPicker: true,
+                        id: "2-2",
+                        name: "endDate",
+                        info: {
+                            title: "CHECK-OUT",
+                            num: 27,
+                            month: "Jun"
+                        }
+                    })
+
+                    @@include("./partials/UI/datepicker.html", {
+                        classes: {
+                            datepicker: "datepicker_white datepicker_doublearrows",
+                            title: "datepicker__title_gray",
+                            day: "datepicker__day_black",
+                            month: "datepicker__month_black"
+                        },
+                        doubleArrows: true,
+                        showTitle: true,
+                        isCounter: true,
+                        name: "guests",
+                        info: {
+                            title: "GUESTS",
+                            num: 1
+                        }
+                    })
+
+                </div>
+                <button class="booking-hero__button" type="submit">CHECK AVAILABILITY</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <div class="container">
+                <div class="resort" id="resort-container">
+                    <div class="resort__left">    
+                        <div class="resort__header" id="resort-header">
+                            <h3 class="resort__suptitle">HOTEL BAYVIEW</h3>
+
+                            @@include("./partials/UI/star-rating.html", {
+                                id: 1,
+                                stars: 3,
+                                onlyStars: true,
+                                classes: "star-rating_small"
+                            })
+                        </div>
+
+                        <h2 class="resort__title" id="resort-title">Pearl of the Adriatic</h2>
+
+                        <p class="resort__text" id="resort-text">Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim. Sed quis rutrum tellus, sit amet viverra felis. Cras sagittis sem sit amet urna feugiat rutrum. Nam nulla ipsum, venenatis malesuada felis.</p>
+
+                        @@include("./partials/UI/button.html", {
+                            value: "ABOUT US",
+                            options: {
+                                type: "link",
+                                href: "#" 
+                            },
+                            classes: "resort__button"
+                        })
+                    </div>
+                    <div class="resort__right">
+                        <div class="resort__image resort__image_back" id="resort-image-1">
+                            <img src="assets/images/hero/1.jpg" alt="Image">
+                        </div>
+
+                        <div class="resort__image resort__image_middle" id="resort-image-2">
+                            <img src="assets/images/hero/2.jpg" alt="Image">
+                        </div>
+
+                        <div class="resort__image resort__image_front" id="resort-image-3">
+                            <img src="assets/images/hero/3.jpeg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section section_gray">
+            <div class="container">
+                <div class="section__header" data-type="section-header">
+                    <h3 class="section__suptitle" data-type="section-suptitle">LUXURY HOTEL</h3>
+                    <h2 class="section__title" data-type="section-title">Best Rooms</h2>
+                </div>
+
+                <div class="best-rooms">
+                    <ul class="best-rooms__list" id="best-rooms-list">
+                        <li class="best-rooms__item">
+                            @@include("./partials/room-card.html", {
+                                img: "assets/images/rooms/1.jpeg",
+                                starsId: 3,
+                                classes: "",
+                                buttonClasses: "button_big button_black",
+                                buttonVal: "BOOK NOW FROM 30$",
+                                showButtonIcon: false,
+                                showContent: true,
+                                showInfo: true,
+                                showBody: true
+                            })
+                        </li>
+                        <li class="best-rooms__item">
+                            @@include("./partials/room-card.html", {
+                                img: "assets/images/rooms/2.jpeg",
+                                starsId: 4,
+                                showButtonIcon: false,
+                                classes: "room-card_mini"
+                            })
+                        </li>
+                        <li class="best-rooms__item">
+                            @@include("./partials/room-card.html", {
+                                img: "assets/images/rooms/3.jpeg",
+                                starsId: 5,
+                                showButtonIcon: false,
+                                classes: "room-card_mini"
+                            })
+                        </li>
+                        <li class="best-rooms__item">
+                            @@include("./partials/room-card.html", {
+                                img: "assets/images/rooms/4.jpeg",
+                                starsId: 6,
+                                showButtonIcon: false,
+                                classes: "room-card_mini"
+                            })
+                        </li>
+                        <li class="best-rooms__item">
+                            @@include("./partials/room-card.html", {
+                                img: "assets/images/rooms/5.jpeg",
+                                starsId: 7,
+                                showButtonIcon: false,
+                                classes: "room-card_mini"
+                            })
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="packages" id="packages">
+            <div class="packages__images">
+                <div class="packages__image">
+                    <img src="assets/images/packages/1.webp" alt="image">
+                </div>
+
+                <div class="packages__image">
+                    <img src="assets/images/packages/2.webp" alt="image">
+                </div>
+
+                <div class="packages__image">
+                    <img src="assets/images/packages/3.webp" alt="image">
+                </div>
+
+                <div class="packages__image">
+                    <img src="assets/images/packages/4.jpg" alt="image">
+                </div>
+            </div>
+
+            <div class="packages__info" id="packages-info">
+                <h3 class="packages__suptitle">LUXURY HOTEL & BEST RESORT</h3>
+                <h2 class="packages__title">
+                    Pearl of the
+                    <span>Adriatic</span>
+                </h2>
+
+                <div class="packages__text">
+                    <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. <u>Blandit vel sapien vitae</u>, condimentum ultricies magna et orci ut et lobortis, Phasellus enim</p>
+                    <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. <u>Blandit vel sapien vitae</u>, condimentum ultricies magna et orci ut et lobortis, Phasellus enim</p>
+                </div>
+
+                @@include("./partials/UI/button.html", {
+                    value: "CHECK ALL PACKAGES",
+                    options: {
+                        type: "link",
+                        href: "./room.html"
+                    },
+                    classes: "packages__button"
+                })
+            </div>
+        </div>
+
+        <div class="section section_phrase">
+            <div class="container">
+                <div class="phrase">
+                    <p class="phrase__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Best services orci ut et lobortis. Blandit vel sapien vitae, condimentum</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section_gray">
+            <div class="container">
+                <div class="services">
+                    <div class="services__row">
+                        <div class="services__col">
+                            <div class="swiper services-slider" id="services-slider-1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content services-slider__content_info">
+                                            <h4 class="services-slider__suptitle">wellness</h4>
+                                            <h3 class="services-slider__title">Spa and Beauty</h3>
+                                            <p class="services-slider__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero, blandit.</p>
+
+                                            @@include("./partials/UI/button.html", {
+                                                value: "read more",
+                                                options: {
+                                                    type: "link",
+                                                    href: "#"
+                                                },
+                                                classes: "services-slider__button button_big button_outline"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content services-slider__content_info">
+                                            <h4 class="services-slider__suptitle">WEDDING</h4>
+                                            <h3 class="services-slider__title">Luxury Location</h3>
+                                            <p class="services-slider__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero, blandit.</p>
+
+                                            @@include("./partials/UI/button.html", {
+                                                value: "read more",
+                                                options: {
+                                                    type: "link",
+                                                    href: "#"
+                                                },
+                                                classes: "services-slider__button button_big button_outline"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content services-slider__content_info">
+                                            <h4 class="services-slider__suptitle">Relax</h4>
+                                            <h3 class="services-slider__title">Relax and Enjoy</h3>
+                                            <p class="services-slider__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero, blandit.</p>
+
+                                            @@include("./partials/UI/button.html", {
+                                                value: "read more",
+                                                options: {
+                                                    type: "link",
+                                                    href: "#"
+                                                },
+                                                classes: "services-slider__button button_big button_outline"
+                                            })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-pagination" id="services-slider-pagin-1"></div>
+                            </div>
+                        </div>
+                        <div class="services__col services__col_gray">
+                            <div class="swiper services-slider services-slider_image-container" id="services-img-slider-1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content">
+                                            <img class="services-slider__image" src="assets/images/services/1.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content">
+                                            <img class="services-slider__image" src="assets/images/services/2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content">
+                                            <img class="services-slider__image" src="assets/images/services/3.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services__row">
+                        <div class="services__col services__col_gray">
+                            <div class="swiper services-slider services-slider_image-container" id="services-img-slider-2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content">
+                                            <img class="services-slider__image" src="assets/images/services/3.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content">
+                                            <img class="services-slider__image" src="assets/images/services/2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content">
+                                            <img class="services-slider__image" src="assets/images/services/1.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services__col">
+                            <div class="swiper services-slider" id="services-slider-2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content services-slider__content_info">
+                                            <h4 class="services-slider__suptitle">Relax</h4>
+                                            <h3 class="services-slider__title">Relax and Enjoy</h3>
+                                            <p class="services-slider__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero, blandit.</p>
+
+                                            @@include("./partials/UI/button.html", {
+                                                value: "read more",
+                                                options: {
+                                                    type: "link",
+                                                    href: "#"
+                                                },
+                                                classes: "services-slider__button button_big button_outline"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content services-slider__content_info">
+                                            <h4 class="services-slider__suptitle">WEDDING</h4>
+                                            <h3 class="services-slider__title">Luxury Location</h3>
+                                            <p class="services-slider__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero, blandit.</p>
+
+                                            @@include("./partials/UI/button.html", {
+                                                value: "read more",
+                                                options: {
+                                                    type: "link",
+                                                    href: "#"
+                                                },
+                                                classes: "services-slider__button button_big button_outline"
+                                            })
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="services-slider__content services-slider__content_info">
+                                            <h4 class="services-slider__suptitle">wellness</h4>
+                                            <h3 class="services-slider__title">Spa and Beauty</h3>
+                                            <p class="services-slider__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis. Phasellus enim libero, blandit.</p>
+
+                                            @@include("./partials/UI/button.html", {
+                                                value: "read more",
+                                                options: {
+                                                    type: "link",
+                                                    href: "#"
+                                                },
+                                                classes: "services-slider__button button_big button_outline"
+                                            })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="swiper-pagination" id="services-slider-pagin-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relax" style="background-image: url(assets/images/relax-bg.jpg);" data-type="relax-modal">
+            <div class="container">
+                <div class="relax__inner">
+                    <h2 class="relax__title">Relax and Enjoy the Wellness</h2>
+                    <h3 class="relax__subtitle">LUXURY HOTEL & BEST RESORT</h3>
+
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve" width="59px" height="59px">
+                            <g>
+                                <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30   c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15   C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z" fill="#FFFFFF"/>
+                                <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30   S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z" fill="#FFFFFF"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="section section_gray">
+            <div class="container">
+                <div class="section__header" data-type="section-header">
+                    <h3 class="section__suptitle" data-type="section-suptitle">HOTEL NEWS</h3>
+                    <h2 class="section__title" data-type="section-title">Our Blog</h2>
+                </div>
+
+                <div class="blog" id="blog">
+                    <div class="blog__section">
+                        <ul class="blog__list">
+                            <li class="blog__item item-blog item-blog_clear-image" id="blog-item-1">
+                                <a class="item-blog__header item-blog__header_medium" style="background-image: url(assets/images/blog/1.jpg);" href="./post.html">
+                                    <div class="item-blog__overlay overlay-item-blog">
+                                        <h5 class="overlay-item-blog__suptitle">News</h5>
+                                        <h4 class="overlay-item-blog__title">Follow Adriatic Luxury Hotels</h4>
+                                        <div class="overlay-item-blog__more">READ MORE</div>
+                                        <div class="overlay-item-blog__cite">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" width="512px" height="512px">
+                                                <g>
+                                                    <g >
+                                                        <g>
+                                                            <path d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z" fill="#FFFFFF"/>
+                                                            <path d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z" fill="#FFFFFF"/>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <span class="overlay-item-blog__author">JOHN DOE</span>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <div class="item-blog__body">
+                                    <h5 class="item-blog__suptitle">LUXURY HOTEL</h5>
+                                    <a class="item-blog__title" href="./post.html">
+                                        <h4>Fish Dinner</h4>
+                                    </a>
+                                    <p class="item-blog__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.</p>
+
+                                    @@include("./partials/UI/button.html", {
+                                        value: "Read More",
+                                        options: {
+                                            type: "link",
+                                            href: "./post.html"
+                                        },
+                                        classes: "item-blog__button button_big button_outline"
+                                    })
+                                </div>
+                            </li>
+
+                            <li class="blog__item" id="blog-item-2">
+                                <a class="blog__link" href="./post.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 482.8 482.8" style="enable-background:new 0 0 482.8 482.8;" xml:space="preserve" width="512px" height="512px">
+                                        <g>
+                                            <g>
+                                                <path d="M255.2,209.3c-5.3,5.3-5.3,13.8,0,19.1c21.9,21.9,21.9,57.5,0,79.4l-115,115c-21.9,21.9-57.5,21.9-79.4,0l-17.3-17.3    c-21.9-21.9-21.9-57.5,0-79.4l115-115c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-115,115C8.7,322.7,0,343.6,0,365.8    c0,22.2,8.6,43.1,24.4,58.8l17.3,17.3c16.2,16.2,37.5,24.3,58.8,24.3s42.6-8.1,58.8-24.3l115-115c32.4-32.4,32.4-85.2,0-117.6    C269.1,204,260.5,204,255.2,209.3z" fill="#FFFFFF"/>
+                                                <path d="M458.5,58.2l-17.3-17.3c-32.4-32.4-85.2-32.4-117.6,0l-115,115c-32.4,32.4-32.4,85.2,0,117.6c5.3,5.3,13.8,5.3,19.1,0    s5.3-13.8,0-19.1c-21.9-21.9-21.9-57.5,0-79.4l115-115c21.9-21.9,57.5-21.9,79.4,0l17.3,17.3c21.9,21.9,21.9,57.5,0,79.4l-115,115    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4l115-115c15.7-15.7,24.4-36.6,24.4-58.8    C482.8,94.8,474.2,73.9,458.5,58.2z" fill="#FFFFFF"/>
+                                            </g>
+                                        </g>
+                                    </svg>
+    
+                                    Check New Events
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="blog__section">
+                        <ul class="blog__list">
+                            <li class="blog__item item-blog item-blog_cite item-blog_only-image" id="blog-item-3">
+                                <a class="item-blog__header" href="./post.html">
+                                    <div class="item-blog__overlay overlay-item-blog">
+                                        <h5 class="overlay-item-blog__suptitle">News</h5>
+                                        <h4 class="overlay-item-blog__title">Follow Adriatic Luxury Hotels</h4>
+                                        <div class="overlay-item-blog__more">READ MORE</div>
+                                        <div class="overlay-item-blog__cite">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" width="512px" height="512px">
+                                                <g>
+                                                    <g >
+                                                        <g>
+                                                            <path d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z" fill="#FFFFFF"/>
+                                                            <path d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z" fill="#FFFFFF"/>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+
+                                            <span class="overlay-item-blog__author">JOHN DOE</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="blog__item item-blog" id="blog-item-4">
+                                <a class="item-blog__header" style="background-image: url(assets/images/blog/2.jpeg);" href="./post.html"></a>
+
+                                <div class="item-blog__body">
+                                    <h5 class="item-blog__suptitle">LUXURY HOTEL</h5>
+                                    <a class="item-blog__title" href="./post.html">
+                                        <h4>Around Us</h4>
+                                    </a>
+                                    <p class="item-blog__text">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis.</p>
+
+                                    @@include("./partials/UI/button.html", {
+                                        value: "Read More",
+                                        options: {
+                                            type: "link",
+                                            href: "./post.html"
+                                        },
+                                        classes: "item-blog__button button_big button_outline"
+                                    })
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="blog__section">
+                        <ul class="blog__list">
+                            <li class="blog__item item-blog item-blog_only-image" id="blog-item-5">
+                                <a class="item-blog__header item-blog__header_big" style="background-image: url(assets/images/blog/3.jpg);" href="./post.html">
+                                    <div class="item-blog__overlay overlay-item-blog">
+                                        <h5 class="overlay-item-blog__suptitle">News</h5>
+                                        <h4 class="overlay-item-blog__title">Relax Zone</h4>
+                                        <div class="overlay-item-blog__more">READ MORE</div>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="blog__item item-blog item-blog_only-image" id="blog-item-6">
+                                <a class="item-blog__header item-blog__header_medium" style="background-image: url(assets/images/blog/4.jpg);" href="./post.html">
+                                    <div class="item-blog__overlay overlay-item-blog">
+                                        <h5 class="overlay-item-blog__suptitle">News</h5>
+                                        <h4 class="overlay-item-blog__title">Relax Zone</h4>
+                                        <div class="overlay-item-blog__more">READ MORE</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @@include('./partials/footer.html')
+        @@include('./partials/mobile-menu.html')
+        @@include('./partials/modal.html')
+    </div>
+    
+</body>
+</html>

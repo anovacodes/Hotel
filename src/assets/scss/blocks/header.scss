@@ -1,0 +1,169 @@
+.header {
+    position: absolute;
+    inset: 0;
+    bottom: auto;
+    z-index: $z-header;
+
+    @include breakpoint($mobile) {
+        position: fixed;
+    }
+}
+
+.top-header {
+    background-color: $color-white;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: .8rem 3.9rem;
+    }
+
+    &__right {
+        gap: .8rem 2.5rem;
+    }
+
+    &__languages,
+    &__pages,
+    &__services {
+        display: flex;
+        align-items: center;
+        gap: .8rem 3.8rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__languages {
+        column-gap: 2rem;
+    }
+
+    &__pages {
+        @include breakpoint($tablet) {
+            display: none;
+        }
+    }
+
+    &__services {
+        @include breakpoint($tablet) {
+            column-gap: 2rem;
+        }
+
+        @include breakpoint($mobile-medium) {
+            display: none;
+        }
+    }
+
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.75;
+        letter-spacing: .1rem;
+        color: $color-gray;
+        transition: opacity .1s;
+
+        &:hover,
+        &:focus {
+            opacity: .75;
+        }
+    }
+
+    &__messages {
+        position: relative;
+        display: block;
+        padding-right: .5rem;
+
+        &:hover,
+        &:focus {
+            & > svg {
+                opacity: .75;
+            }
+        }
+    }
+
+    &__messages:hover &__count,
+    &__messages:focus &__count {
+        background-color: $color-brown-hover;
+    }
+
+    &__count {
+        width: 1.3rem;
+        height: 1.4rem;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -.7rem;
+        right: 0;
+        font-size: 1.1rem;
+        line-height: 1;
+        color: $color-white;
+        background-color: $color-brown;
+        transition: background-color .1s;
+    }
+
+    &__account {
+        display: flex;
+        align-items: center;
+        gap: .9rem;
+        background-color: $color-brown;
+        padding: .95rem 2rem;
+        transition: background-color .1s;
+
+        &:hover,
+        &:focus {
+            background-color: $color-brown-hover;
+        }
+    }
+
+    &__avatar {
+        height: 3.1rem;
+        width: 3.1rem;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        overflow: hidden;
+
+        & > img {
+            height: 100%;
+            min-width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__user > div {
+        line-height: 1;
+        letter-spacing: .1rem;
+        color: $color-white;
+
+        &:first-child {
+            font-family: $font-gilda;
+            font-size: 1.2rem;
+            margin-bottom: .4rem;
+        }
+
+        &:last-child {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.bottom-header {
+    background-color: $color-dark;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    @@include('./partials/head.html', {
+        "title": "Hotel - Booking"
+    })
+
+</head>
+<body>
+
+    <div class="wrapper">
+
+        @@include('./partials/header.html')
+
+        @@include('./partials/subheader.html', {
+            title: "BOOKING",
+            img: "./assets/images/subheader/6.jpg",
+            showSteps: true,
+            classes: ""
+        })
+
+        <div class="content">
+            <div class="container">
+                <div class="content__inner">
+                    <aside class="sidebar">
+                        <ul class="sidebar__list">
+                            <li class="sidebar__item">
+                                <form class="reservation reservation_booking" action="#">
+                                    <div class="reservation__header">
+                                        <img class="reservation__image" src="assets/images/rooms/2.jpeg" alt="image">
+                                    </div>
+
+                                    <div class="reservation__body">
+                                        <h4 class="reservation__title">Your reservation</h4>
+
+                                        <div class="reservation__dates">
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "",
+                                                    title: "",
+                                                    day: "",
+                                                    month: ""
+                                                },
+                                                showTitle: true,
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                showYear: true,
+                                                id: "1-1",
+                                                name: "startDate",
+                                                info: {
+                                                    title: "CHECK-IN",
+                                                    num: 26,
+                                                    month: "Jun",
+                                                    dayweek: "monday"
+                                                }
+                                            })
+
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "",
+                                                    title: "",
+                                                    day: "",
+                                                    month: ""
+                                                },
+                                                showTitle: true,
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                showYear: true,
+                                                id: "1-2",
+                                                name: "endDate",
+                                                info: {
+                                                    title: "CHECK-OUT",
+                                                    num: 27,
+                                                    month: "Jun",
+                                                    dayweek: "friday"
+                                                }
+                                            })
+
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "datepicker_small",
+                                                    title: "",
+                                                    day: "datepicker__day_small datepicker__day_white",
+                                                    month: ""
+                                                },
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                name: "guests",
+                                                info: {
+                                                    dayweek: "GUESTS",
+                                                    num: 2
+                                                }
+                                            })
+
+                                            @@include("./partials/UI/datepicker.html", {
+                                                classes: {
+                                                    datepicker: "datepicker_small",
+                                                    title: "",
+                                                    day: "datepicker__day_small datepicker__day_white",
+                                                    month: ""
+                                                },
+                                                onlyDay: true,
+                                                showBottom: true,
+                                                name: "nights",
+                                                info: {
+                                                    dayweek: "nights",
+                                                    num: 3
+                                                }
+                                            })
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reservation__footer">
+                                        <div class="reservation__price">
+                                            <span class="reservation__num">300</span>
+
+                                            <div class="reservation__price-info">
+                                                <div class="reservation__currency">$</div>
+                                                <div class="reservation__total">/ TOTAL</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <main class="main">
+                        <form class="order" action="./checkout.html">
+                            <section class="order__section">
+                                <h2 class="order__title">Add Extra Services</h2>
+
+                                <div class="add-extra-services">
+                                    <ul class="add-extra-services__list">
+                                        <li class="add-extra-services__item">
+                                            <div>
+                                                <input type="checkbox" class="checkbox" id="checkbox-1">
+                                            </div>
+
+                                            <label class="add-extra-services__label" for="checkbox-1">
+                                                <span>Animal Allowed :</span>
+                                                <span>$ 37.00 / Group / Trip</span>
+                                            </label>
+                                        </li>
+
+                                        <li class="add-extra-services__item">
+                                            <div>
+                                                <input type="checkbox" class="checkbox" id="checkbox-2">
+                                            </div>
+
+                                            <label class="add-extra-services__label" for="checkbox-2">
+                                                <span>Swimming Pool :</span>
+                                                <span>$ 15.00 / Room/ Night</span>
+                                            </label>
+                                        </li>
+
+                                        <li class="add-extra-services__item">
+                                            <div>
+                                                <input type="checkbox" class="checkbox" id="checkbox-3">
+                                            </div>
+                                            
+                                            <label class="add-extra-services__label" for="checkbox-3">
+                                                <span>Smooking Room :</span>
+                                                <span>$ 15.00 / Room/ Night</span>
+                                            </label>
+                                        </li>
+
+                                        <li class="add-extra-services__item">
+                                            <div>
+                                                <input type="checkbox" class="checkbox" id="checkbox-4">
+                                            </div>
+
+                                            <label class="add-extra-services__label" for="checkbox-4">
+                                                <span>Wifi 24 H :</span>
+                                                <span>$ 15.00 / Room/ Night</span>
+                                            </label>
+                                        </li>
+
+                                        <li class="add-extra-services__item">
+                                            <div>
+                                                <input type="checkbox" class="checkbox" id="checkbox-5">
+                                            </div>
+
+                                            <label class="add-extra-services__label" for="checkbox-5">
+                                                <span>Sea View :</span>
+                                                <span>$ 15.00 / Room/ Night</span>
+                                            </label>
+                                        </li>
+
+                                        <li class="add-extra-services__item">
+                                            <div>
+                                                <input type="checkbox" class="checkbox" id="checkbox-6">
+                                            </div>
+
+                                            <label class="add-extra-services__label" for="checkbox-6">
+                                                <span>Breakfast Included :</span>
+                                                <span>$ 15.00 / Room/ Night</span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+
+                            <section class="order__section">
+                                <h2 class="order__title">Add Your Informations</h2>
+
+                                <div class="contact-form">
+                                    <div class="contact-form__fields">
+                                        <div class="contact-form__row contact-form__row_double">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="name">Name:</label>
+                                                <input class="input" id="name" type="text" name="name" autocomplete="given-name">
+                                            </div>
+        
+                                            <div class="contact-form__field">
+                                                <label class="label" for="surname">Surname:</label>
+                                                <input class="input" id="surname" type="text" name="surname" autocomplete="family-name">
+                                            </div>
+                                        </div>
+        
+                                        <div class="contact-form__row contact-form__row_double">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="email">Email:</label>
+                                                <input class="input" id="email" type="email" name="email" autocomplete="email">
+                                            </div>
+        
+                                            <div class="contact-form__field">
+                                                <label class="label" for="phone">Phone:</label>
+                                                <input class="input" id="phone" type="text" name="phone" autocomplete="tel">
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-form__row contact-form__row_double">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="address">Address:</label>
+                                                <input class="input" id="address" type="text" name="address" autocomplete="address-line1">
+                                            </div>
+        
+                                            <div class="contact-form__field">
+                                                <label class="label" for="city">City:</label>
+                                                <input class="input" id="city" type="text" name="city" autocomplete="address-level2">
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-form__row contact-form__row_double">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="country">Country:</label>
+                                                <input class="input" id="country" type="text" name="country" autocomplete="country">
+                                            </div>
+        
+                                            <div class="contact-form__field">
+                                                <label class="label" for="zip">ZIP:</label>
+                                                <input class="input" id="zip" type="text" name="zip" autocomplete="postal-code">
+                                            </div>
+                                        </div>
+        
+                                        <div class="contact-form__row">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="message">Requests:</label>
+                                                <textarea class="textarea textarea_big" name="message" id="message"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="contact-form__row contact-form__row_double">
+                                            <div class="contact-form__field">
+                                                <label class="label" for="arrival">Arrival:</label>
+                                                <input class="input" id="arrival" type="text" name="arrival" autocomplete="off">
+                                            </div>
+        
+                                            <div class="contact-form__field">
+                                                <label class="label" for="coupon">Coupon:</label>
+                                                <input class="input" id="coupon" type="text" name="coupon" autocomplete="off">
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                    @@include("./partials/UI/button.html", {
+                                        value: "BOOK NOW",
+                                        options: {
+                                            type: "button",
+                                            buttonType: "submit"
+                                        },
+                                        classes: "contact-form__button"
+                                    })
+                                </div>
+                            </section>
+                        </form>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        @@include('./partials/footer.html')
+        @@include('./partials/mobile-menu.html')
+    </div>
+    
+</body>
+</html>

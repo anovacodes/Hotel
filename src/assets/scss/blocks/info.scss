@@ -1,0 +1,119 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem 3rem;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint($mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint($mobile-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.5;
+        letter-spacing: .084rem;
+        color: $color-gray;
+
+        & > span:first-child {
+            color: $color-dark;
+        }
+    }
+}
+
+.requests-info {
+    &__title,
+    &__text {
+        font-size: 1.4rem;
+        letter-spacing: .084rem;
+    }
+
+    &__title {
+        font-weight: 400;
+        color: $color-dark;
+    }
+
+    &__text {
+        color: $color-gray;
+    }
+}
+
+.services-info {
+    &__title {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: .084rem;
+        color: $color-dark;
+        margin-bottom: 1.2rem;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint($mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include breakpoint($mobile-small) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem 1.4rem;
+        font-size: 1.4rem;
+        line-height: 1.3;
+        text-transform: capitalize;
+        color: $color-gray;
+
+        & > svg {
+            max-width: 2.6rem;
+            max-height: 2.6rem;
+        }
+    }
+}
+
+.payment-info {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+
+    &__title,
+    &__text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: .084rem;
+    }
+
+    &__title {
+        color: $color-dark;
+    }
+
+    &__text {
+        color: $color-gray;
+    }
+
+    &__button {
+        width: 16rem;
+    }
+}

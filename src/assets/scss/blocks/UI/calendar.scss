@@ -1,0 +1,65 @@
+.calendar {
+    user-select: none;
+
+    & .dycalendar-container {
+        display: block;
+        border: none;
+    }
+
+    & .dycalendar-month-container {
+        padding: 0;
+    }
+
+    & .dycalendar-header {
+        margin: 0;
+        background-color: $color-black;
+    }
+
+    & .dycalendar-span-month-year {
+        display: block;
+        font-family: $font-gilda;
+        font-size: 2rem;
+        line-height: 1;
+        letter-spacing: -.04rem;
+        color: $color-white;
+        margin: 0;
+        padding: 2.2rem;
+        cursor: default;
+    }
+
+    & .dycalendar-body {
+        margin: 0;
+        padding: .3rem 1.3rem;
+        background-color: $color-dark;
+
+        @include breakpoint($mobile-dino) {
+            padding: .3rem;
+        }
+
+        & table {
+            width: 100%;
+            border-spacing: 1rem;
+
+            @include breakpoint($mobile-dino) {
+                border-spacing: 0;
+            }
+
+            & tr:first-child td {
+                color: $color-gray;
+            }
+
+            & tr td {
+                font-size: 1.2rem;
+                line-height: 1;
+                letter-spacing: .048rem;
+                padding: .7rem;
+                color: $color-white;
+            }
+        }
+    }
+
+    & .dycalendar-today-date {
+        color: $color-white;
+        background-color: $color-brown;
+    }
+}

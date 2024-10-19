@@ -1,0 +1,17 @@
+.tag {
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: $color-gray;
+    border: .1rem solid #f1f1f1;
+    background-color: $color-white;
+    padding: .7rem .8rem;
+    transition: border-color .1s,
+                color .1s;
+
+    &:hover,
+    &:focus {
+        border-color: #d6d6d6;
+        color: #6d6d6d;
+    }
+}

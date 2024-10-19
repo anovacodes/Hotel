@@ -1,0 +1,65 @@
+.mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    top: 11.8rem;
+    z-index: -1;
+
+    @include breakpoint($mobile) {
+        display: block;
+    }
+
+    &.hidden {
+        z-index: $z-mobile-menu;
+    }
+
+    &.active {
+        z-index: $z-mobile-menu;
+    }
+
+    &.active &__inner {
+        height: 100%;
+        opacity: 1;
+    }
+
+    &__inner {
+        position: relative;
+        height: 0;
+        opacity: 0;
+        overflow: hidden auto;
+        background-color: #242424;
+        transition: height .75s,
+                    opacity .75s;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        line-height: 1;
+    }
+
+    &__item:first-child &__link {
+        padding-top: 2.6rem;
+    }
+
+    &__item:last-child &__link {
+        padding-bottom: 2.6rem;
+    }
+
+    &__link {
+        display: block;
+        font-size: 1.8rem;
+        text-transform: capitalize;
+        color: $color-white;
+        padding: 1.3rem 2rem;
+    }
+}

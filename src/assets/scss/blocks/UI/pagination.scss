@@ -1,0 +1,42 @@
+.pagination {
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2.4rem;
+        margin: 0;
+        padding: 0;
+
+        @include breakpoint($mobile) {
+            gap: 1.8rem;
+        }
+    }
+
+    &__item {
+        transition: opacity .15s;
+
+        &:hover {
+            opacity: .75;
+        }
+    }
+
+    &__item_active &__link {
+        background-color: $color-brown;
+    }
+
+    &__link {
+        width: 3.7rem;
+        height: 3.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+        letter-spacing: .143rem;
+        line-height: 1;
+        color: $color-white;
+        background-color: $color-dark;
+        transition: background-color .15s;
+    }
+}

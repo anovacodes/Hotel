@@ -1,0 +1,76 @@
+.comments {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    &:not(& &) {
+        max-height: 55rem;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            top: auto;
+            height: 12rem;
+            background: linear-gradient(
+                180deg, 
+                rgba($color-white, 0), 
+                rgba($color-white, 1)
+            )
+        }
+    }
+
+    &_reviews:not(& &) {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            inset: 0;
+            top: auto;
+            height: 12rem;
+            background: linear-gradient(
+                180deg, 
+                rgba(#f9f9f9, 0), 
+                rgba(#f9f9f9, 1)
+            )
+        }
+    }
+
+    &:not(&_reviews) &__item {
+        margin-bottom: 0;
+    }
+
+    &_reviews &__item {
+        border-bottom: .2rem solid #f1f1f1;
+    }
+
+    &_active {
+        max-height: none !important;
+        overflow: auto !important;
+
+        &::after {
+            display: none !important;
+        }
+    }
+
+    &__item > & {
+        margin-left: 5rem;
+    }
+
+    &__item {
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+
+        &:first-child {
+            padding-top: 3rem;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}

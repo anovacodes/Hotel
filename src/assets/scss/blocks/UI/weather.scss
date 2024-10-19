@@ -1,0 +1,20 @@
+.weather {
+    display: flex;
+    align-items: center;
+
+    &__count {
+        font-family: $font-gilda;
+        font-size: 2.95rem;
+        line-height: 1;
+        color: $color-white;
+        margin: 0 .8rem 0 1.4rem;
+    }
+
+    &__symbol {
+        align-self: flex-start;
+        font-size: 1.25rem;
+        line-height: 1.75;
+        text-transform: uppercase;
+        color: $color-gray;
+    }
+}

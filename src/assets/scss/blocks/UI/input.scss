@@ -1,0 +1,17 @@
+.input {
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1;
+    color: $color-dark;
+    background-color: #f9f9f9;
+    border: .1rem solid #f1f1f1;
+    padding: 1.05rem 1.2rem;
+    transition: border-color .15s,
+                background-color .15s;
+
+    &:focus {
+        border-color: #dbdbdb;
+        background-color: #f0f0f0;
+    }
+}

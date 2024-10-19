@@ -1,0 +1,119 @@
+.wysiwyg-editor {
+    & h1,
+    & h2, 
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+        font-family: $font-gilda;
+        text-transform: capitalize;
+        color: $color-dark;
+        line-height: 1.4;
+        margin: 2rem 0;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & h1 {
+        font-size: 2.8rem;
+    }
+
+    & h2 {
+        font-size: 2.5rem;
+    }
+
+    & h3 {
+        font-size: 2.3rem;
+    }
+
+    & h4 {
+        font-size: 2.2rem;
+    }
+
+    & h5 {
+        font-size: 2rem;
+    }
+
+    & h6 {
+        font-size: 1.8rem;
+    }
+
+    & ul,
+    & ol {
+        margin: 0 0 2rem;
+        padding: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & ol {
+        padding-left: 2rem;
+    }
+
+    & p,
+    & li {
+        font-size: 1.4rem;
+        letter-spacing: .084rem;
+        color: $color-gray;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & ul li {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+            background-color: $color-gray;
+        }
+    }
+
+    & li {
+        margin-bottom: .5rem;
+    }
+
+    & p img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    & > img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & a {
+        display: inline-block;
+        font-size: 1.4rem;
+        color: $color-gray;
+        transition: opacity .15s;
+
+        &:hover,
+        &:focus {
+            opacity: .75;
+        }
+    }
+}
