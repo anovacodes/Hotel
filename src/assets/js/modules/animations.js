@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 const useCountUpAnimation = () => {
     const items = document.querySelectorAll("[data-type='count-up']")
-    
+
     if (!items.length) return
 
     items.forEach(item => {
@@ -21,18 +21,18 @@ const useCountUpAnimation = () => {
             enableScrollSpy: true,
             scrollSpyOnce: true
         })
-        
+
         if (!countUp.error) {
             countUp.start()
         } else {
-            console.log(countUp.error)
+            console.error(countUp.error)
         }
     })
 }
 
 const useRatingProgressAnimation = () => {
     const progressLines = document.querySelectorAll("[data-type='progress']")
-    
+
     if (!progressLines.length) return
 
     progressLines.forEach(line => {
@@ -101,12 +101,12 @@ const useResortAnimation = () => {
 const useSectionHeaderAnimation = () => {
     const sectionHeaders = document.querySelectorAll("[data-type='section-header']")
 
-    if (!sectionHeaders.length) return
+    if (!sectionHeaders.length || isMobile()) return
 
     sectionHeaders.forEach(sectionHeader => {
         const sectionTitles = sectionHeader.querySelector("[data-type='section-title']")
         const sectionSuptitles = sectionHeader.querySelector("[data-type='section-suptitle']")
-        
+
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: sectionHeader,
@@ -165,26 +165,6 @@ const useBestRoomsAnimation = () => {
         }, 0)
 }
 
-const usePackagesAnimation = () => {
-    const packages = document.getElementById("packages")
-
-    if (!packages || isMobile()) return
-
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: packages,
-            start: "top 85%"
-        }
-    })
-
-    tl.fromTo(packages, {
-        gridTemplateColumns: "1fr 2fr"
-    }, {
-        gridTemplateColumns: "1fr 1fr",
-        duration: 1
-    })
-}
-
 const useBlogAnimation = () => {
     const blog = document.getElementById("blog")
 
@@ -233,7 +213,7 @@ const useBlogAnimation = () => {
 }
 
 export const cursorHeroAnimation = (swiper, isInit) => {
-    const [ currentSlide ] = swiper.visibleSlides
+    const [currentSlide] = swiper.visibleSlides
     const slider = swiper.hostEl
     const headerHeight = getHeaderHeight()
 
@@ -242,7 +222,7 @@ export const cursorHeroAnimation = (swiper, isInit) => {
     if (isInit) {
         slider.addEventListener("mousemove", moveElementsFromCursor)
         slider.addEventListener("mouseleave", setDefaultTransform)
-    } 
+    }
 
     const collections = [
         slider.querySelectorAll(".hero-slider__suptitle"),
@@ -255,7 +235,7 @@ export const cursorHeroAnimation = (swiper, isInit) => {
 
     function moveElementsFromCursor(event) {
         let { x, y } = event
-        
+
         y -= headerHeight
 
         collections.forEach(collection => {
@@ -286,5 +266,4 @@ useRatingProgressAnimation()
 useResortAnimation()
 useSectionHeaderAnimation()
 useBestRoomsAnimation()
-usePackagesAnimation()
 useBlogAnimation()
