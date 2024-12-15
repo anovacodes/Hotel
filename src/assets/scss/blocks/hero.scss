@@ -162,7 +162,8 @@
 
     &_mobile {
         display: none;
-        position: static;
+        position: relative;
+        z-index: 1;
 
         @include breakpoint($mobile) {
             width: 100%;
