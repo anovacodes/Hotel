@@ -8,14 +8,24 @@ import { handleDefaultModal } from "./modules/default-modal.js"
 import { handleViewButtons } from "./modules/handleViewButtons.js"
 import { handleAnimatedDropdown } from "./modules/dropdown.js"
 import { handleCalendar } from "./modules/calendar.js"
-import { 
-    handleShowFullComment,
-    handleShowFullReviews
-} from "./modules/showFullComment.js"
+import { handleShowFullComment, handleShowFullReviews } from "./modules/showFullComment.js"
 import "./modules/datepicker.js"
 import "./modules/map.js"
 import "./modules/rating.js"
 import { cursorHeroAnimation } from "./modules/animations.js"
+import { pageViewer } from "./modules/page-viewer.js"
+
+pageViewer([
+    { label: "Home", url: "./" },
+    { label: "Rooms", url: "./rooms.html" },
+    { label: "Room", url: "./room.html" },
+    { label: "Checkout", url: "./checkout.html" },
+    { label: "Booking", url: "./booking.html" },
+    { label: "Blog", url: "./blog.html" },
+    { label: "Blog Post", url: "./post.html" },
+    { label: "Thank You", url: "./thankyou.html" },
+    { label: "Contact", url: "./contact.html" }
+])
 
 burgerMenu("burger-menu", "mobile-menu")
 
@@ -28,9 +38,8 @@ export function initSwiper(selector, options) {
     }
 }
 
-
 initSwiper("#hero-slider", {
-    modules: [ Pagination, EffectFade, Autoplay ],
+    modules: [Pagination, EffectFade, Autoplay],
     loop: true,
     speed: 1500,
     effect: "fade",
@@ -48,13 +57,13 @@ initSwiper("#hero-slider", {
 })
 
 const servicesImageSlider1 = initSwiper("#services-img-slider-1", {
-    modules: [ EffectFade ],
+    modules: [EffectFade],
     effect: "fade",
-    fadeEffect: { crossFade: true },
+    fadeEffect: { crossFade: true }
 })
 
 const servicesSlider1 = initSwiper("#services-slider-1", {
-    modules: [ Pagination, EffectFade ],
+    modules: [Pagination, EffectFade],
     effect: "fade",
     fadeEffect: { crossFade: true },
     pagination: {
@@ -71,13 +80,13 @@ const servicesSlider1 = initSwiper("#services-slider-1", {
 })
 
 const servicesImageSlider2 = initSwiper("#services-img-slider-2", {
-    modules: [ EffectFade ],
+    modules: [EffectFade],
     effect: "fade",
-    fadeEffect: { crossFade: true },
+    fadeEffect: { crossFade: true }
 })
 
 const servicesSlider2 = initSwiper("#services-slider-2", {
-    modules: [ Pagination, EffectFade ],
+    modules: [Pagination, EffectFade],
     effect: "fade",
     fadeEffect: { crossFade: true },
     pagination: {
@@ -98,7 +107,7 @@ thumbsSlider(
     "#thumbs-slider-1-2",
     {
         featuredSliderSettings: {
-            modules: [ Thumbs, Navigation ],
+            modules: [Thumbs, Navigation],
             spaceBetween: 10,
             navigation: {
                 prevEl: "#room-slider-arrow-left",
@@ -106,7 +115,7 @@ thumbsSlider(
             }
         },
         thumbsSliderSettings: {
-            modules: [ FreeMode ],
+            modules: [FreeMode],
             slidesPerView: 2,
             spaceBetween: 5,
             freeMode: true,
@@ -130,6 +139,3 @@ document.addEventListener("click", event => {
     handleShowFullComment(event)
     handleShowFullReviews(event)
 })
-
-
-
