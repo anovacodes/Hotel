@@ -1,5 +1,7 @@
+@use "entities" as *;
+
 .page-viewer {
-    position: fixed;
+    position: absolute;
     left: 2rem;
     bottom: 2rem;
     display: flex;
@@ -12,8 +14,8 @@
     z-index: 5000;
 
     @include breakpoint($mobile-small) {
-        left: 0;
-        bottom: 0;
+        left: 1rem;
+        bottom: 1rem;
         font-size: 1.4rem;
     }
 
@@ -26,15 +28,16 @@
         max-height: 0;
     }
 
+    &--hidden &__button::before {
+        content: "o";
+    }
+
     &__inner {
         width: 30rem;
         border-radius: 0.8rem;
-        background-color: #333;
-        box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.25);
         transform-origin: bottom left;
-        transition:
-            transform 0.4s ease,
-            width 0.4s ease;
 
         @include breakpoint($mobile-medium) {
             width: 20rem;
@@ -44,7 +47,7 @@
             width: 19rem;
         }
 
-        @include breakpoint($mobile-dino) {
+        @include breakpoint($mobile-extra-small) {
             width: 15rem;
         }
     }
@@ -54,10 +57,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 1.2rem 1.8rem 0.8rem;
-        border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
-        color: #fff;
+        border-bottom: 0.1rem solid rgb(114 114 114 / 15%);
+        color: #4d4d4d;
 
-        @include breakpoint($mobile-dino) {
+        @include breakpoint($mobile-extra-small) {
             padding: 1rem 1.2rem 0.8rem;
         }
     }
@@ -65,9 +68,6 @@
     &__list {
         max-height: 42svh;
         overflow: hidden auto;
-        margin: 0;
-        padding: 0;
-        transition: max-height 0.4s ease;
 
         &::-webkit-scrollbar {
             &-track {
@@ -80,17 +80,24 @@
         }
     }
 
-    &__item:last-child &__link {
-        padding-bottom: 1.2rem;
+    &__item:first-child &__link {
+        padding-top: 1.6rem;
 
-        @include breakpoint($mobile-dino) {
+        @include breakpoint($mobile-extra-small) {
+            padding-top: 1rem;
+        }
+    }
+
+    &__item:last-child &__link {
+        padding-bottom: 1.6rem;
+
+        @include breakpoint($mobile-extra-small) {
             padding-bottom: 1rem;
         }
     }
 
     &__item:hover &__link {
-        color: #fff;
-        background-color: #555;
+        background-color: #e2e2e2;
         transition:
             background-color 0.15s ease,
             color 0.15s ease;
@@ -100,11 +107,11 @@
         display: block;
         line-height: 1;
         padding: 0.8rem 1.8rem;
-        color: #dddddd;
+        color: #4d4d4d;
 
         @include truncate;
 
-        @include breakpoint($mobile-dino) {
+        @include breakpoint($mobile-extra-small) {
             padding: 0.8rem 1.2rem;
         }
     }
@@ -117,8 +124,8 @@
         justify-content: center;
         align-items: center;
         border-radius: 0.8rem;
-        background-color: #333;
-        box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        box-shadow: 0.2rem 0.2rem 0.6rem rgba(0, 0, 0, 0.25);
         transition: background-color 0.15s ease;
 
         &::before {
@@ -129,7 +136,7 @@
             font-size: 2.2rem;
             font-weight: 500;
             line-height: 1;
-            color: #fff;
+            color: #4d4d4d;
 
             @include breakpoint($mobile-small) {
                 font-size: 1.6rem;
@@ -137,8 +144,8 @@
         }
 
         &:hover,
-        &:focus {
-            background-color: #555;
+        &:focus-visible {
+            background-color: #e2e2e2;
         }
     }
 }
